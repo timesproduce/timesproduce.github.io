@@ -1,5 +1,6 @@
 ---
-title: Contact
+description: Contact the Times Produce sales team about wholesale seasonal produce and cross dock services. 1700 Bay Street, Los Angeles, CA 90021.
+title: Contact Our Sales Team
 ---
 
 <section class="split">

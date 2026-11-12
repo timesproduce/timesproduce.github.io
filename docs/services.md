@@ -1,5 +1,6 @@
 ---
-title: Services
+description: Wholesale produce for restaurants, hotels, schools, casinos and retailers, plus import/export from our Los Angeles facility on Bay Street.
+title: Wholesale Produce Services
 ---
 
 <section class="split">

@@ -1,10 +1,11 @@
 ---
+description: Times Produce is a wholesale produce distributor in Los Angeles with 70+ years of experience. Fresh fruits and vegetables, mixed or straight loads, shipped worldwide.
 title: Wholesale Produce in Los Angeles
 ---
 
 <section class="split">
 <div class="panel cream">
-<h2>Our customers come first. Always.</h2>
+<h1>Our customers come first. Always.</h1>
 <p>We've been in the produce business for more than 70 years, and we know a lot of California farmers personally. We're a wholesale distributor in Los Angeles, and we ship to customers all over the world.</p>
 </div>
 <div class="photo" style="background-image:url(/images/tomatoes.jpg)" role="img" aria-label="Tomatoes on a mint background"></div>

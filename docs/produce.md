@@ -1,5 +1,6 @@
 ---
-title: Produce
+description: Browse the vegetables and fruits Times Produce carries, from everyday basics to exotic and seasonal finds. Wholesale, Los Angeles.
+title: Fresh Fruits & Vegetables
 ---
 
 <section class="split">
