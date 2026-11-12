@@ -5,7 +5,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Times Produce',
   description:
-    'Los Angeles-based wholesale produce distributor with over 70 years in the industry, serving customers worldwide.',
+    'Times Produce is a Los Angeles wholesale produce distributor with more than 70 years of experience, shipping fresh fruits and vegetables worldwide.',
   base: process.env.BASE ?? '/',
   cleanUrls: true,
   appearance: false,

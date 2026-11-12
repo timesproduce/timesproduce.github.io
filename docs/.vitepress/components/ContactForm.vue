@@ -25,7 +25,7 @@ async function submit(e: Event) {
 </script>
 
 <template>
-  <p v-if="state === 'done'"><strong>We'll get back to you shortly!</strong></p>
+  <p v-if="state === 'done'"><strong>Thanks! We'll be in touch soon.</strong></p>
   <form v-else class="contact-form" @submit.prevent="submit">
     <div class="row">
       <label>First Name <input name="first_name" required /></label>
@@ -36,10 +36,10 @@ async function submit(e: Event) {
       <label>Phone <input name="phone" type="tel" /></label>
     </div>
     <label>Company <input name="company" /></label>
-    <label>Message <textarea name="message" rows="5" placeholder="Type your message here" required /></label>
+    <label>Message <textarea name="message" rows="5" placeholder="How can we help?" required /></label>
     <!-- honeypot: bots fill this in, people never see it -->
     <input name="_gotcha" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-    <button type="submit" :disabled="state === 'sending'">{{ state === 'sending' ? 'Sending…' : 'Submit' }}</button>
-    <p v-if="state === 'error'">Something went wrong. Please call us at +1 323.261.6677.</p>
+    <button type="submit" :disabled="state === 'sending'">{{ state === 'sending' ? 'Sending…' : 'Send message' }}</button>
+    <p v-if="state === 'error'">Sorry, that didn't go through. Please try again, or give us a call at +1 323.261.6677.</p>
   </form>
 </template>
