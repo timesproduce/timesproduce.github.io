@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 // The recipient address is configured inside the Formspree dashboard, so it
 // never appears in this site's source or HTML. Only the form ID is public.
-const endpoint = import.meta.env.VITE_FORM_ENDPOINT || 'https://formspree.io/f/YOUR_FORM_ID'
+const endpoint = import.meta.env.VITE_FORM_ENDPOINT || 'https://formspree.io/f/mnpdnbkw'
 const state = ref<'idle' | 'sending' | 'done' | 'error'>('idle')
 
 async function submit(e: Event) {
