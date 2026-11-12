@@ -1,0 +1,30 @@
+:root {
+  --vp-c-brand-1: #8a6d3b;
+  --vp-c-brand-2: #a07f45;
+  --vp-c-brand-3: #6f5630;
+  --vp-c-brand-soft: rgba(138, 109, 59, 0.14);
+  --vp-button-brand-bg: #8a6d3b;
+  --vp-button-brand-hover-bg: #6f5630;
+}
+.VPNavBarTitle .logo { height: 44px; }
+
+.hero-photo {
+  width: 100%; height: 320px; object-fit: cover; border-radius: 8px; margin: 1.5rem 0;
+}
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.pillars > div { padding: 1.25rem; border: 1px solid var(--vp-c-divider); border-radius: 8px; }
+.pillars h3 { margin-top: 0; }
+.produce-list { columns: 2 220px; column-gap: 2rem; padding-left: 1.2rem; }
+.contact-form { display: grid; gap: 1rem; max-width: 560px; }
+.contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 560px) { .contact-form .row { grid-template-columns: 1fr; } }
+.contact-form label { display: grid; gap: .25rem; font-size: .9rem; font-weight: 500; }
+.contact-form input, .contact-form textarea {
+  padding: .6rem .75rem; border: 1px solid var(--vp-c-divider); border-radius: 6px;
+  background: var(--vp-c-bg); font: inherit;
+}
+.contact-form button {
+  padding: .7rem 1.4rem; border: 0; border-radius: 6px; cursor: pointer; font: inherit;
+  background: var(--vp-button-brand-bg); color: #fff; justify-self: start;
+}
+.contact-form button:disabled { opacity: .6; cursor: default; }
