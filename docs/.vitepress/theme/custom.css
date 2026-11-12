@@ -19,9 +19,17 @@ img { display: block; max-width: 100%; }
 .brand img { width: 239px; height: auto; }
 .burger { position: absolute; right: 79px; top: 81px; width: 79px; height: 79px; border: 0; border-radius: 50%; background: var(--pale); cursor: pointer; display: grid; place-items: center; padding: 0; }
 .burger svg { width: 46px; height: 46px; }
-.menu { position: absolute; z-index: 10; right: 0; top: 0; bottom: 0; width: min(100%, 340px); background: var(--pale); display: flex; flex-direction: column; justify-content: center; gap: 1rem; padding: 0 2.5rem; }
-.menu a { text-decoration: none; font-size: 28px; font-weight: 700; color: var(--green); }
-.menu a:hover { color: var(--orange); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.burger:focus-visible, .menu a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.menu-overlay { position: fixed; inset: 0; z-index: 100; background: var(--green); display: flex; align-items: center; justify-content: center; }
+.menu-overlay .burger.close { position: absolute; top: 40px; right: 40px; }
+.menu { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; text-align: center; }
+.menu a { text-decoration: none; font-size: 40px; font-weight: 700; letter-spacing: -0.03em; color: var(--pale); padding: .1em .4em; }
+.menu a:hover, .menu a.active { color: var(--orange); }
+.menu a.menu-phone { font-size: 18px; font-weight: 300; letter-spacing: 0; margin-top: 1.5rem; color: var(--pale); text-decoration: underline; }
+.menu-enter-active, .menu-leave-active { transition: opacity .2s ease; }
+.menu-enter-from, .menu-leave-to { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .menu-enter-active, .menu-leave-active { transition: none; } }
 
 /* split sections */
 .split { display: grid; grid-template-columns: 1fr 1fr; }
@@ -74,9 +82,14 @@ img { display: block; max-width: 100%; }
   .panel { padding: 48px 28px; }
   .split h1, .split h2 { font-size: 44px; }
   .photo { min-height: 320px; }
+  .frame { padding: 12px; }
   .site-header { height: 180px; }
-  .brand img { width: 170px; }
-  .burger { right: 24px; top: 50px; width: 64px; height: 64px; }
+  .brand img { width: 150px; }
+  .burger { right: 16px; top: 64px; width: 52px; height: 52px; }
+  .burger svg { width: 34px; height: 34px; }
+  .menu-overlay .burger.close { width: 56px; height: 56px; }
+  .menu-overlay .burger.close { top: 20px; right: 20px; }
+  .menu a { font-size: 34px; }
   .contact-form .row { grid-template-columns: 1fr; }
   .site-footer { min-height: 0; }
   .footer-photo { min-height: 320px; }
