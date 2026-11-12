@@ -1,13 +1,14 @@
 import { defineConfig } from 'vitepress'
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import site from './site.json'
 
 // Canonical site address. Set SITE_URL when the custom domain goes live
 // (e.g. SITE_URL=https://www.timesproduce.com) so canonical links, social
 // cards and the sitemap point at the right place.
-const SITE = (process.env.SITE_URL || 'https://timesproduce.github.io').replace(/\/$/, '')
+const SITE = (process.env.SITE_URL || 'https://www.timesproduce.com').replace(/\/$/, '')
 const BASE = process.env.BASE ?? '/'
-const NAME = 'Times Produce'
+const NAME = site.name
 const DEFAULT_DESC =
   'Times Produce is a Los Angeles wholesale produce distributor with more than 70 years of experience, shipping fresh fruits and vegetables worldwide.'
 
@@ -74,15 +75,15 @@ export default defineConfig({
       url: `${SITE}${BASE}`,
       logo: `${SITE}${BASE}images/clocktower.png`,
       image: `${SITE}${BASE}images/og-image.jpg`,
-      telephone: '+1-323-261-6677',
-      faxNumber: '+1-323-261-6688',
+      telephone: site.phone_link,
+      faxNumber: site.fax_display,
       foundingDate: '1951',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '1700 Bay Street',
-        addressLocality: 'Los Angeles',
-        addressRegion: 'CA',
-        postalCode: '90021',
+        streetAddress: site.address.street,
+        addressLocality: site.address.city,
+        addressRegion: site.address.state,
+        postalCode: site.address.zip,
         addressCountry: 'US'
       },
       areaServed: 'Worldwide'

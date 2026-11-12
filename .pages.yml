@@ -1,0 +1,130 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+media:
+  input: docs/public/images
+  output: /images
+  extensions: [jpg, jpeg, png, webp]
+  categories: [image]
+
+content:
+  - name: home
+    label: Home page
+    type: file
+    path: docs/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Shown in Google results and the browser tab. ' | Times Produce' is added automatically." }
+      - { name: description, label: Search description, type: text, description: "One or two sentences shown under the title in Google (about 150 characters)." }
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+      - { name: aspects_heading, label: Teal section heading, type: string }
+      - name: aspects
+        label: Three highlights
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values:
+                - { value: box, label: Box }
+                - { value: globe, label: Globe }
+                - { value: check, label: Checklist }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - { name: bottom_image, label: Bottom photo, type: image }
+      - { name: bottom_image_alt, label: Bottom photo description, type: string }
+
+  - name: services
+    label: Services page
+    type: file
+    path: docs/services.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+
+  - name: produce
+    label: Produce page
+    type: file
+    path: docs/produce.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: vegetables
+        label: Vegetables
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - { name: items, label: Items, type: string, list: true }
+      - name: fruits
+        label: Fruits
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - { name: items, label: Items, type: string, list: true }
+
+  - name: contact
+    label: Contact page
+    type: file
+    path: docs/contact.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: site
+    label: Address, phone & footer
+    type: file
+    path: docs/.vitepress/site.json
+    format: json
+    fields:
+      - { name: name, label: Business name, type: string }
+      - { name: phone_display, label: Phone (as shown), type: string }
+      - { name: phone_link, label: Phone (for tap-to-call, digits with +1), type: string }
+      - { name: fax_display, label: Fax, type: string }
+      - name: address
+        label: Address
+        type: object
+        fields:
+          - { name: street, label: Street, type: string }
+          - { name: city, label: City, type: string }
+          - { name: state, label: State, type: string }
+          - { name: zip, label: ZIP, type: string }
+      - { name: credit_text, label: Footer credit text, type: string }
+      - { name: credit_name, label: Credit name, type: string }
+      - { name: credit_url, label: Credit link, type: string }

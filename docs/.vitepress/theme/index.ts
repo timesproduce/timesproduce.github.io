@@ -1,5 +1,9 @@
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
+import HomePage from '../components/HomePage.vue'
+import ServicesPage from '../components/ServicesPage.vue'
+import ProducePage from '../components/ProducePage.vue'
+import ContactPage from '../components/ContactPage.vue'
 import ContactForm from '../components/ContactForm.vue'
 import './custom.css'
 
@@ -8,5 +12,9 @@ export default {
   NotFound,
   enhanceApp({ app }) {
     app.component('ContactForm', ContactForm)
+    app.component('HomePage', HomePage)
+    app.component('ServicesPage', ServicesPage)
+    app.component('ProducePage', ProducePage)
+    app.component('ContactPage', ContactPage)
   }
 }

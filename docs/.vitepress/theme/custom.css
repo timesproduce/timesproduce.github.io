@@ -94,3 +94,7 @@ img { display: block; max-width: 100%; }
   .site-footer { min-height: 0; }
   .footer-photo { min-height: 320px; }
 }
+
+.panel.top { justify-content: flex-start; padding-top: 60px; }
+.photo.tall { min-height: 1000px; }
+@media (max-width: 800px) { .photo.tall { min-height: 320px; } }

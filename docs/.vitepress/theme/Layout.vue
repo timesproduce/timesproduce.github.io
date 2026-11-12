@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { Content, useRoute, withBase } from 'vitepress'
+import site from '../site.json'
 
 const route = useRoute()
 const open = ref(false)
@@ -29,7 +30,7 @@ const links = [
   { text: 'Contact', href: '/contact' }
 ]
 const mapSrc =
-  'https://maps.google.com/maps?q=1700+Bay+Street,+Los+Angeles,+CA+90021&z=14&output=embed'
+  `https://maps.google.com/maps?q=${encodeURIComponent(`${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.zip}`)}&z=14&output=embed`
 </script>
 
 <template>
@@ -57,7 +58,7 @@ const mapSrc =
         <nav class="menu">
           <a v-for="l in links" :key="l.href" :href="withBase(l.href)" :aria-current="isActive(l.href) ? 'page' : undefined"
             :class="{ active: isActive(l.href) }" @click="open = false; setOpen(false)">{{ l.text }}</a>
-          <a class="menu-phone" href="tel:+13232616677">+1 323.261.6677</a>
+          <a class="menu-phone" :href="`tel:${site.phone_link}`">{{ site.phone_display }}</a>
         </nav>
       </div>
     </Transition>
@@ -72,14 +73,14 @@ const mapSrc =
       <div class="footer-info">
         <img :src="withBase('/images/clocktower.png')" alt="Times Produce" class="clock" />
         <div class="addr-row">
-          <address>1700 Bay Street,<br />Los Angeles<br />CA, 90021.</address>
+          <address>{{ site.address.street }},<br />{{ site.address.city }}<br />{{ site.address.state }}, {{ site.address.zip }}.</address>
           <div class="tel">
-            <a href="tel:+13232616677">Phone : +1 323.261.6677</a><br />
-            Fax : +1 323.261.6688
+            <a :href="`tel:${site.phone_link}`">Phone : {{ site.phone_display }}</a><br />
+            Fax : {{ site.fax_display }}
           </div>
         </div>
         <iframe class="map" :src="mapSrc" title="Map to Times Produce" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
-        <p class="credit">© 2022 Design by <a href="http://www.wildernessbrand.studio" target="_blank" rel="noopener">Wilderness Brand</a></p>
+        <p class="credit">{{ site.credit_text }} <a :href="site.credit_url" target="_blank" rel="noopener">{{ site.credit_name }}</a></p>
       </div>
     </footer>
   </div>

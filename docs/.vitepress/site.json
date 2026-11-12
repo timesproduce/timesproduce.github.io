@@ -1,0 +1,16 @@
+{
+  "name": "Times Produce",
+  "tagline": "Est. 1951 · Los Angeles, CA",
+  "phone_display": "+1 323.261.6677",
+  "phone_link": "+13232616677",
+  "fax_display": "+1 323.261.6688",
+  "address": {
+    "street": "1700 Bay Street",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90021"
+  },
+  "credit_text": "© 2022 Design by",
+  "credit_name": "Wilderness Brand",
+  "credit_url": "http://www.wildernessbrand.studio"
+}
