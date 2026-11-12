@@ -10,18 +10,4 @@ export default defineConfig({
   cleanUrls: true,
   appearance: false,
   head: [['link', { rel: 'icon', href: (process.env.BASE ?? '/') + 'images/clocktower.png' }]],
-  themeConfig: {
-    logo: '/images/logo.png',
-    siteTitle: false,
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Our Services', link: '/services' },
-      { text: 'Our Produce', link: '/produce' },
-      { text: 'Contact', link: '/contact' }
-    ],
-    footer: {
-      message: '1700 Bay Street, Los Angeles, CA 90021 · Tel +1 323.261.6677 · Fax +1 323.261.6688',
-      copyright: '© Times Produce'
-    }
-  }
 })

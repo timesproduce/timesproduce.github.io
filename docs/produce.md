@@ -1,27 +1,18 @@
 ---
-title: Our Produce
+title: Produce
 ---
 
-# We bring the farm to you
-
-We supply pantry staples, exotic and seasonal produce, and consolidation services for fresh, frozen, or dry produce for specialized clients. Availability varies by season — [contact us](/contact) for details.
-
-<img class="hero-photo" src="/images/fruit.jpg" alt="Tropical fruit" style="object-position:center" />
-
-## Vegetables
-
-Our selection includes local and imported produce from around the world.
-
-<ul class="produce-list">
-<li>Yuca</li><li>Yams</li><li>Parsnips</li><li>Turnips</li><li>Rutabagas</li><li>Carrots</li><li>Kohlrabi</li><li>Lotus Root</li><li>Horseradish</li><li>Daikon</li><li>Turmeric</li><li>Jicama</li><li>Jerusalem artichokes</li><li>Radishes</li><li>Ginger</li><li>Celery</li><li>Lettuce</li><li>Onions</li><li>Garlic</li><li>Potatoes (variety)</li><li>Tomatoes (variety)</li><li>Kale</li><li>Arugula</li><li>Beets</li><li>Asparagus</li><li>Brussels Sprouts</li><li>Cabbage</li><li>Endives</li><li>Beans (variety)</li><li>Bok Choy</li><li>Chinese Broccoli</li><li>Chinese Cabbage</li><li>Eggplant</li><li>Green Onion</li><li>Peppers (variety)</li><li>Squashes (variety)</li><li>Kabocha</li><li>Mung Bean</li><li>Mushrooms: Shiitake, Oyster, Chanterelle, Morel, Enoki, Bolete, Lion's Mane</li><li>Snow Pea</li><li>Water Chestnut</li><li>Bitter Melon</li>
-</ul>
-
-## Fruits
-
-Our fruit is sourced from North American growers and international producers in South America and Asia.
-
-<ul class="produce-list">
-<li>Araza</li><li>Cherimoya</li><li>Hog Plum</li><li>Curuba</li><li>Lulo</li><li>Tamarillo</li><li>Maracuya</li><li>Papayuella</li><li>Cape Gooseberry</li><li>Feijoa</li><li>Lychee</li><li>Jackfruit</li><li>Rambutan</li><li>Finger Limes</li><li>Mangosteens</li><li>Coconuts</li><li>Longans</li><li>Cactus Pears</li><li>Pomegranates</li><li>Guava</li><li>Satsuma Tangerines</li><li>Loquats</li><li>Mamey</li><li>Avocados</li><li>Guanabanas</li><li>Oranges (variety)</li><li>Apples</li><li>Papaya</li><li>Mangoes</li><li>Persimmons</li><li>Watermelons</li><li>Pears</li><li>Berries</li>
-</ul>
-
-[Work with Us →](/contact)
+<section class="split">
+<div class="photo" style="background-image:url(/images/fruit.jpg)" role="img" aria-label="Tropical fruit"></div>
+<div class="panel cream" style="justify-content:flex-start;padding-top:60px">
+<h1>We bring the<br>farm to you</h1>
+<p>You can count on us for your pantry staples, exotic fruits and vegetables, and seasonal produce. In addition, we also provide consolidation services for any type of produce, whether it is fresh, frozen, or dry, to meet the unique needs of our specialized clients. Produce may vary by season, contact us for details.</p>
+<a class="btn solid" href="/contact">Work with Us</a>
+<h2 class="sm">Vegetables</h2>
+<p>Whether you prefer locally grown fruits and vegetables or exotic produce from around the world, you'll find them all in our selection.</p>
+<p class="produce-text">Yuca, Yams, Parsnips, Turnips, Rutabagas, Carrots, Kohlrabi, Lotus Root, Horseradish, Daikon, Turmeric, Jicama, Jerusalem artichokes, Radishes, Ginger, Celery, Lettuce, Onions, Garlic, variety of Potatoes and Tomatoes, Kale, Arugula, Beets, Asparagus, Brussels Sprouts, Cabbage, Endives, variety of beans, Bok Choy, Chinese Broccoli, Chinese Cabbage, Eggplant, Green Onion, variety of Peppers, variety of Squashes, Kabocha, Mung Bean, variety of mushrooms such as (Shiitake, Oyster, Chanterelle, Morel, Enoki, Bolete, Lions Mane), Snow Pea, Water Chestnut, Bitter Melon.</p>
+<h2 class="sm">Fruits</h2>
+<p>Our fruit selection is sourced from both local North American growers and international producers in South America and Asia, providing a diverse range of options.</p>
+<p class="produce-text">Araza, Cherimoya, Hog Plum, Curuba, Lulo, Tamarillo, Maracuya, Papayuella, Cape Gooseberry, Feijoa, Lychee, Jackfruit, Rambutan, Finger Limes, Mangosteens, Coconuts, Longans, Cactus Pears, Pomegranates, Guava, Satsuma Tangerines, Loquats, Mamey, Avocados, Guanabanas, variety of Oranges, Apples, Papaya, Mangoes, Persimmons, Watermelons, Pears, Berries.</p>
+</div>
+</section>
