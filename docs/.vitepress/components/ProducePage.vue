@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
+import { useHref } from '../theme/ui'
 const { frontmatter: f } = useData()
-const list = (items: string[]) => items.join(', ') + '.'
+const href = useHref()
+const list = (items: string[]) => items.join(f.value.list_separator ?? ', ') + (f.value.list_end ?? '.')
 </script>
 
 <template>
@@ -10,13 +12,16 @@ const list = (items: string[]) => items.join(', ') + '.'
     <div class="panel cream top">
       <h1>{{ f.heading }}</h1>
       <p>{{ f.intro }}</p>
-      <a class="btn solid" :href="withBase('/contact')">{{ f.button_label }}</a>
-      <h2 class="sm">{{ f.vegetables.heading }}</h2>
-      <p v-if="f.vegetables.intro">{{ f.vegetables.intro }}</p>
-      <p class="produce-text">{{ list(f.vegetables.items) }}</p>
-      <h2 class="sm">{{ f.fruits.heading }}</h2>
-      <p v-if="f.fruits.intro">{{ f.fruits.intro }}</p>
-      <p class="produce-text">{{ list(f.fruits.items) }}</p>
+      <a class="btn solid" :href="href('/contact')">{{ f.button_label }}</a>
+      <p v-if="f.ask_more"><strong>{{ f.ask_more }}</strong></p>
+      <template v-for="sec in [f.vegetables, f.fruits]" :key="sec.heading">
+        <h2 class="sm">{{ sec.heading }}</h2>
+        <p v-if="sec.intro">{{ sec.intro }}</p>
+        <template v-for="g in sec.groups" :key="g.heading">
+          <h3 class="grp">{{ g.heading }}</h3>
+          <p class="produce-text">{{ list(g.items) }}</p>
+        </template>
+      </template>
     </div>
   </section>
 </template>

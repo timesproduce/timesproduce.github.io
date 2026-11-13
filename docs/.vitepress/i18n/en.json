@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Our Services",
+    "produce": "Our Produce",
+    "grow": "Local Farmers",
+    "contact": "Contact"
+  },
+  "site": {
+    "home_aria": "Times Produce home",
+    "logo_alt": "Times Produce — Est. 1951, Los Angeles, CA",
+    "menu": "Menu",
+    "close_menu": "Close menu",
+    "site_navigation": "Site navigation",
+    "language": "Language",
+    "footer_photo_alt": "Historic photo of the Los Angeles produce market",
+    "phone_label": "Phone",
+    "fax_label": "Fax",
+    "map_title": "Map to Times Produce",
+    "footer_grow": "Local Farmers",
+    "footer_contact": "Contact our sales team"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "back": "Back to home"
+  },
+  "contact_form": {
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "message": "Message",
+    "message_placeholder": "How can we help?",
+    "sending": "Sending…"
+  },
+  "grower_form": {
+    "name": "Your name",
+    "phone": "Phone number",
+    "email": "Email (optional)",
+    "crops": "What do you grow? Where is your farm?",
+    "crops_placeholder": "Example: avocados and limes, Ventura County",
+    "sending": "Sending…"
+  }
+}

@@ -22,6 +22,7 @@ content:
           - { name: text, label: Text, type: text }
           - { name: image, label: Photo, type: image }
           - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - { name: eyebrow, label: Small line above the heading (say what you do and where), type: string }
       - { name: aspects_heading, label: Teal section heading, type: string }
       - name: aspects
         label: Three highlights
@@ -39,6 +40,18 @@ content:
           - { name: title, label: Title, type: string }
           - { name: text, label: Text, type: text }
       - { name: button_label, label: Button text, type: string }
+      - name: audiences
+        label: Buyer and grower boxes (bottom of page)
+        type: object
+        fields:
+          - name: buyers
+            label: For wholesale buyers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+          - name: growers
+            label: For farmers and growers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text, description: "Plain words, short sentences." }, { name: button_label, label: Button text, type: string } ]
       - { name: bottom_image, label: Bottom photo, type: image }
       - { name: bottom_image_alt, label: Bottom photo description, type: string }
 
@@ -54,6 +67,14 @@ content:
       - { name: image_alt, label: Photo description, type: string }
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: distributor
+        label: Looking-for-a-distributor box
+        type: object
+        fields:
+          - { name: heading, label: Heading (what a buyer would search for), type: string }
+          - { name: text, label: Intro, type: text, description: "About 8th-grade reading level. Only say things that are true and that you can deliver." }
+          - { name: points, label: Points, type: string, list: true }
+          - { name: button_label, label: Button text, type: string }
       - name: sections
         label: Sections
         type: object
@@ -62,6 +83,10 @@ content:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text }
       - { name: button_label, label: Button text, type: string }
+      - name: grower_note
+        label: Note for farmers (optional)
+        type: object
+        fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
 
   - name: produce
     label: Produce page
@@ -75,6 +100,7 @@ content:
       - { name: image_alt, label: Photo description, type: string }
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text }
+      - { name: ask_more, label: "Line after the intro (for example: Don't see it? Ask us.)", type: string }
       - { name: button_label, label: Button text, type: string }
       - name: vegetables
         label: Vegetables
@@ -82,14 +108,26 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: intro, label: Intro (optional), type: text }
-          - { name: items, label: Items, type: string, list: true }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
       - name: fruits
         label: Fruits
         type: object
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: intro, label: Intro (optional), type: text }
-          - { name: items, label: Items, type: string, list: true }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
 
   - name: contact
     label: Contact page
@@ -106,6 +144,52 @@ content:
       - { name: submit_label, label: Send button text, type: string }
       - { name: success_message, label: Message after sending, type: string }
       - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: grow
+    label: Grow With Us page (for farmers)
+    type: file
+    path: docs/grow.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Say what a farmer would search for, e.g. 'Sell Your Produce to ...'." }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
+      - name: what_we_buy
+        label: What we buy
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
+          - { name: items, label: Crops we buy, type: string, list: true }
+      - { name: form_button_label, label: Button that jumps to the form, type: string }
+      - { name: faq_heading, label: Questions heading, type: string }
+      - name: faq
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer, type: text, description: "Plain words, short sentences. Do not name specific certifications." }
+      - name: food_safety
+        label: Food safety
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Say growers must follow all required food safety guidelines. Do not name specific certifications. Plain words, short sentences." }
+          - { name: help, label: Help line, type: string }
+      - name: form
+        label: Form section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+      - { name: buyer_link_label, label: Link to the buyer contact page, type: string }
 
   - name: site
     label: Address, phone & footer
@@ -128,3 +212,1043 @@ content:
       - { name: credit_text, label: Footer credit text, type: string }
       - { name: credit_name, label: Credit name, type: string }
       - { name: credit_url, label: Credit link, type: string }
+
+  - name: ui_en
+    label: "Menu, form labels & footer words"
+    type: file
+    path: docs/.vitepress/i18n/en.json
+    format: json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - { name: home, label: Home, type: string }
+          - { name: services, label: Services, type: string }
+          - { name: produce, label: Produce, type: string }
+          - { name: grow, label: Grow, type: string }
+          - { name: contact, label: Contact, type: string }
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: home_aria, label: Home aria, type: string }
+          - { name: logo_alt, label: Logo alt, type: string }
+          - { name: menu, label: Menu, type: string }
+          - { name: close_menu, label: Close menu, type: string }
+          - { name: site_navigation, label: Site navigation, type: string }
+          - { name: language, label: Language, type: string }
+          - { name: footer_photo_alt, label: Footer photo alt, type: string }
+          - { name: phone_label, label: Phone label, type: string }
+          - { name: fax_label, label: Fax label, type: string }
+          - { name: map_title, label: Map title, type: string }
+          - { name: footer_grow, label: Footer grow, type: string }
+          - { name: footer_contact, label: Footer contact, type: string }
+      - name: not_found
+        label: Not Found
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: back, label: Back, type: string }
+      - name: contact_form
+        label: Contact Form
+        type: object
+        fields:
+          - { name: first_name, label: First name, type: string }
+          - { name: last_name, label: Last name, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: message, label: Message, type: string }
+          - { name: message_placeholder, label: Message placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+      - name: grower_form
+        label: Grower Form
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: crops, label: Crops, type: string }
+          - { name: crops_placeholder, label: Crops placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+
+  - name: es_home
+    label: "Spanish — Home page"
+    type: file
+    path: docs/es/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Shown in Google results and the browser tab. ' | Times Produce' is added automatically." }
+      - { name: description, label: Search description, type: text, description: "One or two sentences shown under the title in Google (about 150 characters)." }
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - { name: eyebrow, label: Small line above the heading (say what you do and where), type: string }
+      - { name: aspects_heading, label: Teal section heading, type: string }
+      - name: aspects
+        label: Three highlights
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values:
+                - { value: box, label: Box }
+                - { value: globe, label: Globe }
+                - { value: check, label: Checklist }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: audiences
+        label: Buyer and grower boxes (bottom of page)
+        type: object
+        fields:
+          - name: buyers
+            label: For wholesale buyers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+          - name: growers
+            label: For farmers and growers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text, description: "Plain words, short sentences." }, { name: button_label, label: Button text, type: string } ]
+      - { name: bottom_image, label: Bottom photo, type: image }
+      - { name: bottom_image_alt, label: Bottom photo description, type: string }
+
+  - name: es_services
+    label: "Spanish — Services page"
+    type: file
+    path: docs/es/services.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: distributor
+        label: Looking-for-a-distributor box
+        type: object
+        fields:
+          - { name: heading, label: Heading (what a buyer would search for), type: string }
+          - { name: text, label: Intro, type: text, description: "About 8th-grade reading level. Only say things that are true and that you can deliver." }
+          - { name: points, label: Points, type: string, list: true }
+          - { name: button_label, label: Button text, type: string }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: grower_note
+        label: Note for farmers (optional)
+        type: object
+        fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+
+  - name: es_produce
+    label: "Spanish — Produce page"
+    type: file
+    path: docs/es/produce.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: ask_more, label: "Line after the intro (for example: Don't see it? Ask us.)", type: string }
+      - { name: button_label, label: Button text, type: string }
+      - name: vegetables
+        label: Vegetables
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+      - name: fruits
+        label: Fruits
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+
+  - name: es_contact
+    label: "Spanish — Contact page"
+    type: file
+    path: docs/es/contact.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: es_grow
+    label: "Spanish — Grow With Us page (for farmers)"
+    type: file
+    path: docs/es/grow.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Say what a farmer would search for, e.g. 'Sell Your Produce to ...'." }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
+      - name: what_we_buy
+        label: What we buy
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
+          - { name: items, label: Crops we buy, type: string, list: true }
+      - { name: form_button_label, label: Button that jumps to the form, type: string }
+      - { name: faq_heading, label: Questions heading, type: string }
+      - name: faq
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer, type: text, description: "Plain words, short sentences. Do not name specific certifications." }
+      - name: food_safety
+        label: Food safety
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Say growers must follow all required food safety guidelines. Do not name specific certifications. Plain words, short sentences." }
+          - { name: help, label: Help line, type: string }
+      - name: form
+        label: Form section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+      - { name: buyer_link_label, label: Link to the buyer contact page, type: string }
+
+  - name: ui_es
+    label: "Spanish — menu, form labels & footer words"
+    type: file
+    path: docs/.vitepress/i18n/es.json
+    format: json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - { name: home, label: Home, type: string }
+          - { name: services, label: Services, type: string }
+          - { name: produce, label: Produce, type: string }
+          - { name: grow, label: Grow, type: string }
+          - { name: contact, label: Contact, type: string }
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: home_aria, label: Home aria, type: string }
+          - { name: logo_alt, label: Logo alt, type: string }
+          - { name: menu, label: Menu, type: string }
+          - { name: close_menu, label: Close menu, type: string }
+          - { name: site_navigation, label: Site navigation, type: string }
+          - { name: language, label: Language, type: string }
+          - { name: footer_photo_alt, label: Footer photo alt, type: string }
+          - { name: phone_label, label: Phone label, type: string }
+          - { name: fax_label, label: Fax label, type: string }
+          - { name: map_title, label: Map title, type: string }
+          - { name: footer_grow, label: Footer grow, type: string }
+          - { name: footer_contact, label: Footer contact, type: string }
+      - name: not_found
+        label: Not Found
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: back, label: Back, type: string }
+      - name: contact_form
+        label: Contact Form
+        type: object
+        fields:
+          - { name: first_name, label: First name, type: string }
+          - { name: last_name, label: Last name, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: message, label: Message, type: string }
+          - { name: message_placeholder, label: Message placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+      - name: grower_form
+        label: Grower Form
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: crops, label: Crops, type: string }
+          - { name: crops_placeholder, label: Crops placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+
+  - name: zh_home
+    label: "Chinese — Home page"
+    type: file
+    path: docs/zh/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Shown in Google results and the browser tab. ' | Times Produce' is added automatically." }
+      - { name: description, label: Search description, type: text, description: "One or two sentences shown under the title in Google (about 150 characters)." }
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - { name: eyebrow, label: Small line above the heading (say what you do and where), type: string }
+      - { name: aspects_heading, label: Teal section heading, type: string }
+      - name: aspects
+        label: Three highlights
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values:
+                - { value: box, label: Box }
+                - { value: globe, label: Globe }
+                - { value: check, label: Checklist }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: audiences
+        label: Buyer and grower boxes (bottom of page)
+        type: object
+        fields:
+          - name: buyers
+            label: For wholesale buyers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+          - name: growers
+            label: For farmers and growers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text, description: "Plain words, short sentences." }, { name: button_label, label: Button text, type: string } ]
+      - { name: bottom_image, label: Bottom photo, type: image }
+      - { name: bottom_image_alt, label: Bottom photo description, type: string }
+
+  - name: zh_services
+    label: "Chinese — Services page"
+    type: file
+    path: docs/zh/services.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: distributor
+        label: Looking-for-a-distributor box
+        type: object
+        fields:
+          - { name: heading, label: Heading (what a buyer would search for), type: string }
+          - { name: text, label: Intro, type: text, description: "About 8th-grade reading level. Only say things that are true and that you can deliver." }
+          - { name: points, label: Points, type: string, list: true }
+          - { name: button_label, label: Button text, type: string }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: grower_note
+        label: Note for farmers (optional)
+        type: object
+        fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+
+  - name: zh_produce
+    label: "Chinese — Produce page"
+    type: file
+    path: docs/zh/produce.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: ask_more, label: "Line after the intro (for example: Don't see it? Ask us.)", type: string }
+      - { name: button_label, label: Button text, type: string }
+      - name: vegetables
+        label: Vegetables
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+      - name: fruits
+        label: Fruits
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+
+  - name: zh_contact
+    label: "Chinese — Contact page"
+    type: file
+    path: docs/zh/contact.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: zh_grow
+    label: "Chinese — Grow With Us page (for farmers)"
+    type: file
+    path: docs/zh/grow.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Say what a farmer would search for, e.g. 'Sell Your Produce to ...'." }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
+      - name: what_we_buy
+        label: What we buy
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
+          - { name: items, label: Crops we buy, type: string, list: true }
+      - { name: form_button_label, label: Button that jumps to the form, type: string }
+      - { name: faq_heading, label: Questions heading, type: string }
+      - name: faq
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer, type: text, description: "Plain words, short sentences. Do not name specific certifications." }
+      - name: food_safety
+        label: Food safety
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Say growers must follow all required food safety guidelines. Do not name specific certifications. Plain words, short sentences." }
+          - { name: help, label: Help line, type: string }
+      - name: form
+        label: Form section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+      - { name: buyer_link_label, label: Link to the buyer contact page, type: string }
+
+  - name: ui_zh
+    label: "Chinese — menu, form labels & footer words"
+    type: file
+    path: docs/.vitepress/i18n/zh.json
+    format: json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - { name: home, label: Home, type: string }
+          - { name: services, label: Services, type: string }
+          - { name: produce, label: Produce, type: string }
+          - { name: grow, label: Grow, type: string }
+          - { name: contact, label: Contact, type: string }
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: home_aria, label: Home aria, type: string }
+          - { name: logo_alt, label: Logo alt, type: string }
+          - { name: menu, label: Menu, type: string }
+          - { name: close_menu, label: Close menu, type: string }
+          - { name: site_navigation, label: Site navigation, type: string }
+          - { name: language, label: Language, type: string }
+          - { name: footer_photo_alt, label: Footer photo alt, type: string }
+          - { name: phone_label, label: Phone label, type: string }
+          - { name: fax_label, label: Fax label, type: string }
+          - { name: map_title, label: Map title, type: string }
+          - { name: footer_grow, label: Footer grow, type: string }
+          - { name: footer_contact, label: Footer contact, type: string }
+      - name: not_found
+        label: Not Found
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: back, label: Back, type: string }
+      - name: contact_form
+        label: Contact Form
+        type: object
+        fields:
+          - { name: first_name, label: First name, type: string }
+          - { name: last_name, label: Last name, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: message, label: Message, type: string }
+          - { name: message_placeholder, label: Message placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+      - name: grower_form
+        label: Grower Form
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: crops, label: Crops, type: string }
+          - { name: crops_placeholder, label: Crops placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+
+  - name: ko_home
+    label: "Korean — Home page"
+    type: file
+    path: docs/ko/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Shown in Google results and the browser tab. ' | Times Produce' is added automatically." }
+      - { name: description, label: Search description, type: text, description: "One or two sentences shown under the title in Google (about 150 characters)." }
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - { name: eyebrow, label: Small line above the heading (say what you do and where), type: string }
+      - { name: aspects_heading, label: Teal section heading, type: string }
+      - name: aspects
+        label: Three highlights
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values:
+                - { value: box, label: Box }
+                - { value: globe, label: Globe }
+                - { value: check, label: Checklist }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: audiences
+        label: Buyer and grower boxes (bottom of page)
+        type: object
+        fields:
+          - name: buyers
+            label: For wholesale buyers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+          - name: growers
+            label: For farmers and growers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text, description: "Plain words, short sentences." }, { name: button_label, label: Button text, type: string } ]
+      - { name: bottom_image, label: Bottom photo, type: image }
+      - { name: bottom_image_alt, label: Bottom photo description, type: string }
+
+  - name: ko_services
+    label: "Korean — Services page"
+    type: file
+    path: docs/ko/services.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: distributor
+        label: Looking-for-a-distributor box
+        type: object
+        fields:
+          - { name: heading, label: Heading (what a buyer would search for), type: string }
+          - { name: text, label: Intro, type: text, description: "About 8th-grade reading level. Only say things that are true and that you can deliver." }
+          - { name: points, label: Points, type: string, list: true }
+          - { name: button_label, label: Button text, type: string }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: grower_note
+        label: Note for farmers (optional)
+        type: object
+        fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+
+  - name: ko_produce
+    label: "Korean — Produce page"
+    type: file
+    path: docs/ko/produce.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: ask_more, label: "Line after the intro (for example: Don't see it? Ask us.)", type: string }
+      - { name: button_label, label: Button text, type: string }
+      - name: vegetables
+        label: Vegetables
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+      - name: fruits
+        label: Fruits
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+
+  - name: ko_contact
+    label: "Korean — Contact page"
+    type: file
+    path: docs/ko/contact.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: ko_grow
+    label: "Korean — Grow With Us page (for farmers)"
+    type: file
+    path: docs/ko/grow.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Say what a farmer would search for, e.g. 'Sell Your Produce to ...'." }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
+      - name: what_we_buy
+        label: What we buy
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
+          - { name: items, label: Crops we buy, type: string, list: true }
+      - { name: form_button_label, label: Button that jumps to the form, type: string }
+      - { name: faq_heading, label: Questions heading, type: string }
+      - name: faq
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer, type: text, description: "Plain words, short sentences. Do not name specific certifications." }
+      - name: food_safety
+        label: Food safety
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Say growers must follow all required food safety guidelines. Do not name specific certifications. Plain words, short sentences." }
+          - { name: help, label: Help line, type: string }
+      - name: form
+        label: Form section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+      - { name: buyer_link_label, label: Link to the buyer contact page, type: string }
+
+  - name: ui_ko
+    label: "Korean — menu, form labels & footer words"
+    type: file
+    path: docs/.vitepress/i18n/ko.json
+    format: json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - { name: home, label: Home, type: string }
+          - { name: services, label: Services, type: string }
+          - { name: produce, label: Produce, type: string }
+          - { name: grow, label: Grow, type: string }
+          - { name: contact, label: Contact, type: string }
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: home_aria, label: Home aria, type: string }
+          - { name: logo_alt, label: Logo alt, type: string }
+          - { name: menu, label: Menu, type: string }
+          - { name: close_menu, label: Close menu, type: string }
+          - { name: site_navigation, label: Site navigation, type: string }
+          - { name: language, label: Language, type: string }
+          - { name: footer_photo_alt, label: Footer photo alt, type: string }
+          - { name: phone_label, label: Phone label, type: string }
+          - { name: fax_label, label: Fax label, type: string }
+          - { name: map_title, label: Map title, type: string }
+          - { name: footer_grow, label: Footer grow, type: string }
+          - { name: footer_contact, label: Footer contact, type: string }
+      - name: not_found
+        label: Not Found
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: back, label: Back, type: string }
+      - name: contact_form
+        label: Contact Form
+        type: object
+        fields:
+          - { name: first_name, label: First name, type: string }
+          - { name: last_name, label: Last name, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: message, label: Message, type: string }
+          - { name: message_placeholder, label: Message placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+      - name: grower_form
+        label: Grower Form
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: crops, label: Crops, type: string }
+          - { name: crops_placeholder, label: Crops placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+
+  - name: ja_home
+    label: "Japanese — Home page"
+    type: file
+    path: docs/ja/index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Shown in Google results and the browser tab. ' | Times Produce' is added automatically." }
+      - { name: description, label: Search description, type: text, description: "One or two sentences shown under the title in Google (about 150 characters)." }
+      - name: hero
+        label: Top section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: image_alt, label: Photo description (for screen readers), type: string }
+          - { name: eyebrow, label: Small line above the heading (say what you do and where), type: string }
+      - { name: aspects_heading, label: Teal section heading, type: string }
+      - name: aspects
+        label: Three highlights
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: select
+            options:
+              values:
+                - { value: box, label: Box }
+                - { value: globe, label: Globe }
+                - { value: check, label: Checklist }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: audiences
+        label: Buyer and grower boxes (bottom of page)
+        type: object
+        fields:
+          - name: buyers
+            label: For wholesale buyers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+          - name: growers
+            label: For farmers and growers
+            type: object
+            fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text, description: "Plain words, short sentences." }, { name: button_label, label: Button text, type: string } ]
+      - { name: bottom_image, label: Bottom photo, type: image }
+      - { name: bottom_image_alt, label: Bottom photo description, type: string }
+
+  - name: ja_services
+    label: "Japanese — Services page"
+    type: file
+    path: docs/ja/services.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Leave a blank line between paragraphs." }
+      - name: distributor
+        label: Looking-for-a-distributor box
+        type: object
+        fields:
+          - { name: heading, label: Heading (what a buyer would search for), type: string }
+          - { name: text, label: Intro, type: text, description: "About 8th-grade reading level. Only say things that are true and that you can deliver." }
+          - { name: points, label: Points, type: string, list: true }
+          - { name: button_label, label: Button text, type: string }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: button_label, label: Button text, type: string }
+      - name: grower_note
+        label: Note for farmers (optional)
+        type: object
+        fields: [ { name: heading, label: Heading, type: string }, { name: text, label: Text, type: text }, { name: button_label, label: Button text, type: string } ]
+
+  - name: ja_produce
+    label: "Japanese — Produce page"
+    type: file
+    path: docs/ja/produce.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: ask_more, label: "Line after the intro (for example: Don't see it? Ask us.)", type: string }
+      - { name: button_label, label: Button text, type: string }
+      - name: vegetables
+        label: Vegetables
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+      - name: fruits
+        label: Fruits
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Intro (optional), type: text }
+          - name: groups
+            label: Groups (for example Citrus, Mushrooms)
+            type: object
+            list: true
+            fields:
+              - { name: heading, label: Group name, type: string }
+              - { name: items, label: Items, type: string, list: true }
+
+  - name: ja_contact
+    label: "Japanese — Contact page"
+    type: file
+    path: docs/ja/contact.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+
+  - name: ja_grow
+    label: "Japanese — Grow With Us page (for farmers)"
+    type: file
+    path: docs/ja/grow.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Browser/search title, type: string, description: "Say what a farmer would search for, e.g. 'Sell Your Produce to ...'." }
+      - { name: description, label: Search description, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: heading, label: Heading, type: string }
+      - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
+      - name: what_we_buy
+        label: What we buy
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
+          - { name: items, label: Crops we buy, type: string, list: true }
+      - { name: form_button_label, label: Button that jumps to the form, type: string }
+      - { name: faq_heading, label: Questions heading, type: string }
+      - name: faq
+        label: Common questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer, type: text, description: "Plain words, short sentences. Do not name specific certifications." }
+      - name: food_safety
+        label: Food safety
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text, description: "Say growers must follow all required food safety guidelines. Do not name specific certifications. Plain words, short sentences." }
+          - { name: help, label: Help line, type: string }
+      - name: form
+        label: Form section
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: intro, label: Text, type: text }
+      - { name: submit_label, label: Send button text, type: string }
+      - { name: success_message, label: Message after sending, type: string }
+      - { name: error_message, label: Message if sending fails, type: string }
+      - { name: buyer_link_label, label: Link to the buyer contact page, type: string }
+
+  - name: ui_ja
+    label: "Japanese — menu, form labels & footer words"
+    type: file
+    path: docs/.vitepress/i18n/ja.json
+    format: json
+    fields:
+      - name: nav
+        label: Nav
+        type: object
+        fields:
+          - { name: home, label: Home, type: string }
+          - { name: services, label: Services, type: string }
+          - { name: produce, label: Produce, type: string }
+          - { name: grow, label: Grow, type: string }
+          - { name: contact, label: Contact, type: string }
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - { name: home_aria, label: Home aria, type: string }
+          - { name: logo_alt, label: Logo alt, type: string }
+          - { name: menu, label: Menu, type: string }
+          - { name: close_menu, label: Close menu, type: string }
+          - { name: site_navigation, label: Site navigation, type: string }
+          - { name: language, label: Language, type: string }
+          - { name: footer_photo_alt, label: Footer photo alt, type: string }
+          - { name: phone_label, label: Phone label, type: string }
+          - { name: fax_label, label: Fax label, type: string }
+          - { name: map_title, label: Map title, type: string }
+          - { name: footer_grow, label: Footer grow, type: string }
+          - { name: footer_contact, label: Footer contact, type: string }
+      - name: not_found
+        label: Not Found
+        type: object
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: back, label: Back, type: string }
+      - name: contact_form
+        label: Contact Form
+        type: object
+        fields:
+          - { name: first_name, label: First name, type: string }
+          - { name: last_name, label: Last name, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: message, label: Message, type: string }
+          - { name: message_placeholder, label: Message placeholder, type: string }
+          - { name: sending, label: Sending, type: string }
+      - name: grower_form
+        label: Grower Form
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: crops, label: Crops, type: string }
+          - { name: crops_placeholder, label: Crops placeholder, type: string }
+          - { name: sending, label: Sending, type: string }

@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Nuestros servicios",
+    "produce": "Nuestros productos",
+    "grow": "Agricultores locales",
+    "contact": "Contacto"
+  },
+  "site": {
+    "home_aria": "Inicio de Times Produce",
+    "logo_alt": "Times Produce — Desde 1951, Los Ángeles, CA",
+    "menu": "Menú",
+    "close_menu": "Cerrar menú",
+    "site_navigation": "Navegación del sitio",
+    "language": "Idioma",
+    "footer_photo_alt": "Foto histórica del mercado de productos de Los Ángeles",
+    "phone_label": "Teléfono",
+    "fax_label": "Fax",
+    "map_title": "Mapa a Times Produce",
+    "footer_grow": "Agricultores locales",
+    "footer_contact": "Hable con ventas"
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "back": "Volver al inicio"
+  },
+  "contact_form": {
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "company": "Empresa",
+    "message": "Mensaje",
+    "message_placeholder": "¿En qué podemos ayudarle?",
+    "sending": "Enviando…"
+  },
+  "grower_form": {
+    "name": "Su nombre",
+    "phone": "Número de teléfono",
+    "email": "Correo electrónico (opcional)",
+    "crops": "¿Qué cultiva? ¿Dónde está su rancho?",
+    "crops_placeholder": "Ejemplo: aguacates y limones, condado de Ventura",
+    "sending": "Enviando…"
+  }
+}

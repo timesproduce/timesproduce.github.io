@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "produce": "取扱商品",
+    "grow": "地元農家の方へ",
+    "contact": "お問い合わせ"
+  },
+  "site": {
+    "home_aria": "Times Produce ホーム",
+    "logo_alt": "Times Produce — 1951年創業、ロサンゼルス",
+    "menu": "メニュー",
+    "close_menu": "メニューを閉じる",
+    "site_navigation": "サイトナビゲーション",
+    "language": "言語",
+    "footer_photo_alt": "ロサンゼルス青果市場の歴史的な写真",
+    "phone_label": "電話",
+    "fax_label": "FAX",
+    "map_title": "Times Produce の地図",
+    "footer_grow": "地元農家の方へ",
+    "footer_contact": "営業チームに連絡"
+  },
+  "not_found": {
+    "title": "ページが見つかりません",
+    "back": "ホームに戻る"
+  },
+  "contact_form": {
+    "first_name": "名",
+    "last_name": "姓",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "company": "会社名",
+    "message": "メッセージ",
+    "message_placeholder": "ご用件をお書きください",
+    "sending": "送信中…"
+  },
+  "grower_form": {
+    "name": "お名前",
+    "phone": "電話番号",
+    "email": "メールアドレス（任意）",
+    "crops": "何を栽培していますか？農場の場所はどこですか？",
+    "crops_placeholder": "例：アボカド、ライム／ベンチュラ郡",
+    "sending": "送信中…"
+  }
+}

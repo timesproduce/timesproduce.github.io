@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "首頁",
+    "services": "我們的服務",
+    "produce": "我們的農產品",
+    "grow": "在地農民",
+    "contact": "聯絡我們"
+  },
+  "site": {
+    "home_aria": "Times Produce 首頁",
+    "logo_alt": "Times Produce — 創立於 1951 年，洛杉磯",
+    "menu": "選單",
+    "close_menu": "關閉選單",
+    "site_navigation": "網站導覽",
+    "language": "語言",
+    "footer_photo_alt": "洛杉磯農產品市場的歷史照片",
+    "phone_label": "電話",
+    "fax_label": "傳真",
+    "map_title": "Times Produce 地圖",
+    "footer_grow": "在地農民",
+    "footer_contact": "聯絡業務團隊"
+  },
+  "not_found": {
+    "title": "找不到頁面",
+    "back": "回到首頁"
+  },
+  "contact_form": {
+    "first_name": "名",
+    "last_name": "姓",
+    "email": "電子郵件",
+    "phone": "電話",
+    "company": "公司",
+    "message": "訊息",
+    "message_placeholder": "有什麼我們可以幫忙的？",
+    "sending": "傳送中…"
+  },
+  "grower_form": {
+    "name": "您的姓名",
+    "phone": "電話號碼",
+    "email": "電子郵件（選填）",
+    "crops": "您種植什麼？農場在哪裡？",
+    "crops_placeholder": "例如：酪梨和萊姆，文圖拉郡",
+    "sending": "傳送中…"
+  }
+}

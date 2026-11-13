@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
+import { useHref } from '../theme/ui'
 const { frontmatter: f } = useData()
+const href = useHref()
 const bg = (p: string) => ({ backgroundImage: `url(${withBase(p)})` })
 </script>
 
 <template>
   <section class="split">
     <div class="panel cream">
+      <p v-if="f.hero.eyebrow" class="eyebrow">{{ f.hero.eyebrow }}</p>
       <h1>{{ f.hero.heading }}</h1>
       <p>{{ f.hero.text }}</p>
     </div>
@@ -22,8 +25,20 @@ const bg = (p: string) => ({ backgroundImage: `url(${withBase(p)})` })
         <h3>{{ a.title }}</h3>
         <p>{{ a.text }}</p>
       </div>
-      <a class="btn" :href="withBase('/services')">{{ f.button_label }}</a>
+      <a class="btn" :href="href('/services')">{{ f.button_label }}</a>
     </div>
     <div class="photo tall" :style="bg(f.bottom_image)" role="img" :aria-label="f.bottom_image_alt" />
+  </section>
+  <section v-if="f.audiences" class="split audiences">
+    <div class="panel cream">
+      <h2 class="md">{{ f.audiences.buyers.heading }}</h2>
+      <p>{{ f.audiences.buyers.text }}</p>
+      <a class="btn solid" :href="href('/contact')">{{ f.audiences.buyers.button_label }}</a>
+    </div>
+    <div class="panel mint">
+      <h2 class="md">{{ f.audiences.growers.heading }}</h2>
+      <p>{{ f.audiences.growers.text }}</p>
+      <a class="btn solid" :href="href('/grow')">{{ f.audiences.growers.button_label }}</a>
+    </div>
   </section>
 </template>

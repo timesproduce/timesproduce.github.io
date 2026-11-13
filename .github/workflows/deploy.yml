@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Optional: Settings > Variables > SITE_URL (e.g. https://www.timesproduce.com)
+      # Optional: Settings > Variables > SITE_URL (e.g. https://timesproduce.com; leave unset to use the default)
       SITE_URL: ${{ vars.SITE_URL }}
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +25,9 @@ jobs:
       - uses: actions/configure-pages@v5
         id: pages
       - run: npm ci
+      # Warns (does not block the deploy) when a language is missing a page or a field.
+      - run: npm run check:i18n
+        continue-on-error: true
       - run: BASE="$(node -e "console.log(new URL('${{ steps.pages.outputs.base_url }}').pathname.replace(/\/?$/, '/'))")" npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

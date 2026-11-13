@@ -1,7 +1,8 @@
 ---
 title: "Wholesale Produce in Los Angeles"
-description: "Times Produce is a wholesale produce distributor in Los Angeles with 70+ years of experience. Fresh fruits and vegetables, mixed or straight loads, shipped worldwide."
+description: "Times Produce is a wholesale produce distributor in Los Angeles with 70+ years of experience. Fresh fruits and vegetables, shipped worldwide."
 hero:
+  eyebrow: "Wholesale produce distributor · Los Angeles, CA"
   heading: "Our customers come first. Always."
   text: "We've been in the produce business for more than 70 years, and we know a lot of California farmers personally. We're a wholesale distributor in Los Angeles, and we ship to customers all over the world."
   image: "/images/tomatoes.jpg"
@@ -20,6 +21,15 @@ aspects:
 button_label: "Our Services"
 bottom_image: "/images/greens.jpg"
 bottom_image_alt: "Fresh green vegetables and herbs"
+audiences:
+  buyers:
+    heading: "Want to buy wholesale?"
+    text: "Grocery stores, distributors, and select restaurants and casinos buy from us. Talk to our sales team."
+    button_label: "Contact sales"
+  growers:
+    heading: "Are you a local farmer? Sell to us."
+    text: "Do you grow something you want to sell to us? Tell us about your farm. Growers must follow all required food safety guidelines."
+    button_label: "Sell your crops"
 ---
 
 <HomePage />
