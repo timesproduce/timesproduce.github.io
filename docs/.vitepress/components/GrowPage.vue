@@ -7,7 +7,7 @@ const bg = (p: string) => ({ backgroundImage: `url(${withBase(p)})` })
 </script>
 
 <template>
-  <section class="split">
+  <section class="split grow">
     <div class="photo" :style="bg(f.image)" role="img" :aria-label="f.image_alt" />
     <div class="panel cream top">
       <h1>{{ f.heading }}</h1>
@@ -17,7 +17,7 @@ const bg = (p: string) => ({ backgroundImage: `url(${withBase(p)})` })
       <p>{{ f.what_we_buy.text }}</p>
     </div>
 
-    <div class="panel mint top">
+    <div class="panel green top">
       <h2 class="md">{{ f.food_safety.heading }}</h2>
       <p>{{ f.food_safety.text }}</p>
       <p>{{ f.food_safety.help }}</p>

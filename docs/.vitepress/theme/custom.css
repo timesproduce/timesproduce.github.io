@@ -96,6 +96,11 @@ img { display: block; max-width: 100%; }
 }
 
 .panel.top { justify-content: flex-start; padding-top: 60px; }
+/* Grow page: photo fills the whole left column beside the stacked panels */
+.split.grow > .photo { grid-column: 1; grid-row: 1 / span 3; min-height: 0; }
+.split.grow > .panel { grid-column: 2; min-height: 0; }
+.panel.green h2 { color: var(--pale); }
+.panel.green a { color: inherit; }
 .photo.tall { min-height: 1000px; }
 @media (max-width: 800px) { .photo.tall { min-height: 320px; } }
 
@@ -142,6 +147,8 @@ html:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
   .split > .photo:first-child + .panel { order: -1; }
   .split > .photo:first-child { min-height: 220px; }
   .panel.top { padding-top: 40px; }
+  .split.grow > .photo, .split.grow > .panel { grid-column: auto; grid-row: auto; }
+  .split.grow > .photo { min-height: 220px; }
 }
 /* iOS zooms the page when an input is under 16px */
 .contact-form input, .contact-form textarea { font-size: 16px; }
