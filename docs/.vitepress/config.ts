@@ -9,6 +9,7 @@ import site from './site.json'
 const SITE = (process.env.SITE_URL || 'https://www.timesproduce.com').replace(/\/$/, '')
 const BASE = process.env.BASE ?? '/'
 const NAME = site.name
+const GTM_ID = 'GTM-MZVXGQP7'
 const DEFAULT_DESC =
   'Times Produce is a Los Angeles wholesale produce distributor with more than 70 years of experience, shipping fresh fruits and vegetables worldwide.'
 
@@ -24,6 +25,11 @@ export default defineConfig({
   sitemap: { hostname: SITE + BASE },
 
   head: [
+    [
+      'script',
+      {},
+      `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+    ],
     ['link', { rel: 'icon', type: 'image/png', href: `${BASE}images/clocktower.png` }],
     ['link', { rel: 'apple-touch-icon', href: `${BASE}images/apple-touch-icon.png` }],
     ['meta', { name: 'theme-color', content: '#1c5443' }],

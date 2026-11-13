@@ -35,6 +35,7 @@ const mapSrc =
 
 <template>
   <div class="frame">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVXGQP7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="site-header">
       <a :href="withBase('/')" class="brand" aria-label="Times Produce home">
         <img :src="withBase('/images/logo.png')" alt="Times Produce — Est. 1951, Los Angeles, CA" />
