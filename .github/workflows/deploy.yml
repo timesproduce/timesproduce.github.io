@@ -29,7 +29,7 @@ jobs:
       - run: npm run check:i18n
         continue-on-error: true
       - run: BASE="$(node -e "console.log(new URL('${{ steps.pages.outputs.base_url }}').pathname.replace(/\/?$/, '/'))")" npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
   deploy:
