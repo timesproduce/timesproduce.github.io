@@ -98,11 +98,12 @@ const mapSrc =
     </div>
     <header class="site-header">
       <a :href="href('/')" class="brand" :aria-label="ui.site.home_aria">
-        <img :src="withBase('/images/logo.png')" alt="" />
+        <img :src="withBase('/images/logo.svg')" alt="" />
       </a>
       <div class="lang">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="12" r="9" /><ellipse cx="12" cy="12" rx="4" ry="9" /><path d="M3 12h18" />
+        <!-- "languages" icon (Lucide, ISC license) -->
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m5 8 6 6" /><path d="m4 14 6-6 2-3" /><path d="M2 5h12" /><path d="M7 2h1" /><path d="m22 22-5-10-5 10" /><path d="M14 18h6" />
         </svg>
         <span class="lang-name" aria-hidden="true">{{ currentLabel }}</span>
         <select class="lang-select" :aria-label="ui.site.language" :value="localeIndex" @change="switchLanguage">
@@ -146,7 +147,7 @@ const mapSrc =
       <div class="footer-photo" :style="{ backgroundImage: `url(${withBase('/images/produce.jpg')})` }" role="img"
         :aria-label="ui.site.footer_photo_alt" />
       <div class="footer-info">
-        <img :src="withBase('/images/clocktower.png')" alt="Times Produce" class="clock" />
+        <img :src="withBase('/images/clocktower.svg')" alt="Times Produce" class="clock" />
         <div class="addr-row">
           <address>{{ site.address.street }},<br />{{ site.address.city }}<br />{{ site.address.state }}, {{ site.address.zip }}.</address>
           <div class="tel">

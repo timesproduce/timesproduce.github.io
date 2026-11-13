@@ -16,7 +16,7 @@ img { display: block; max-width: 100%; }
 
 /* header */
 .site-header { position: relative; background: var(--green); height: 241px; display: flex; align-items: center; justify-content: center; }
-.brand img { width: 239px; height: auto; }
+.brand img { width: 245px; height: auto; }
 .burger { position: absolute; right: 79px; top: 81px; width: 79px; height: 79px; border: 0; border-radius: 50%; background: var(--pale); cursor: pointer; display: grid; place-items: center; padding: 0; }
 .burger svg { width: 46px; height: 46px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -61,7 +61,7 @@ img { display: block; max-width: 100%; }
 .site-footer { display: grid; grid-template-columns: 1fr 1fr; min-height: 820px; }
 .footer-photo { background: #242323 center / cover no-repeat; }
 .footer-info { background: var(--orange); color: #fff; padding: 60px 33px 30px; display: flex; flex-direction: column; gap: 1.6rem; font-size: 16px; }
-.footer-info .clock { width: 110px; height: 110px; }
+.footer-info .clock { width: 116px; height: 116px; }
 .addr-row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .footer-info address { font-style: normal; line-height: 1.5; }
 .footer-info .tel { line-height: 1.5; }
@@ -84,7 +84,7 @@ img { display: block; max-width: 100%; }
   .photo { min-height: 320px; }
   .frame { padding: 12px; }
   .site-header { height: 130px; }
-  .brand img { width: 110px; }
+  .brand img { width: 113px; }
   .burger { right: 16px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; }
   .burger svg { width: 34px; height: 34px; }
   .menu-overlay .burger.close { width: 56px; height: 56px; }
