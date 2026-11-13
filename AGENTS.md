@@ -52,6 +52,12 @@ Languages: English (root), Spanish `es`, Traditional Chinese `zh`, Korean `ko`, 
 - Don't create city-by-city or other near-duplicate pages.
 - Phone staff speak English, Spanish and Japanese. Keep `PHONE_LANGUAGES` in `docs/.vitepress/config.ts` accurate.
 
+## Analytics
+
+- The site loads Google Analytics 4 `G-1C8BST0WKX` directly (see `config.ts`) and sends `contact_form_submit`, `grower_form_submit` and `tel_click` events, each with a `locale` value (`root` means English).
+- The Tag Manager container (`GTM-MZVXGQP7`) is also on the page. **Don't add a GA4 tag for the same ID inside Tag Manager**, or every visit is counted twice.
+- Analytics only runs on the live host, so local previews and test sweeps are safe. Don't test with the real forms: they send real emails and count as real events.
+
 ## Mobile first
 
 Most farmers will use phones. After any layout change, check the home, services, grow and contact pages in all five languages at 320px and 375px wide: no sideways scrolling, and the heading visible without scrolling. Inputs must stay at least 16px.
