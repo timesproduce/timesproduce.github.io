@@ -6,7 +6,7 @@ Read this before changing any page text.
 
 ## Audiences
 
-1. **Wholesale buyers:** grocery stores, other distributors, select restaurants and casinos. Pages: Home, Services, Contact.
+1. **Wholesale buyers:** grocery stores, other distributors, select restaurants and casinos, non-profits and schools. Pages: Home, Services, Contact.
 2. **Local farmers (growers):** Page: Grow With Us (`/grow`). Many are Spanish speakers and read on a phone.
 3. `/produce` is a full produce list for search engines. It stays public and fully visible but is **not in the main menu**; only a small footer link points to it. Don't hide text from visitors.
 
@@ -41,7 +41,7 @@ Languages: English (root), Spanish `es`, Traditional Chinese `zh`, Korean `ko`, 
   - Direct farmers to the **form**, not the phone number. Don't add call buttons, sticky call bars or phone numbers to the grow pages. (The phone stays small in the footer and menu.)
   - The grower form stays short: phone required, email optional.
 - **Don't invent facts:** no delivery areas, minimums, delivery days, customer counts or licence numbers unless the owner supplied them. Copy on the site must be true and deliverable.
-- Wholesale focus is grocery stores, distributors, and select restaurants and casinos. Don't re-add hotels or schools.
+- Wholesale focus is grocery stores, distributors, select restaurants and casinos, and non-profits and schools. Don't re-add hotels.
 - Our own facility being PrimusGFS certified is a claim about us (buyers). It is not a requirement for farmers.
 
 ## SEO rules

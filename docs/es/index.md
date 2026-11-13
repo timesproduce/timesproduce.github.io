@@ -24,7 +24,7 @@ bottom_image_alt: "Verduras y hierbas frescas"
 audiences:
   buyers:
     heading: "¿Quiere comprar al por mayor?"
-    text: "Tiendas de abarrotes, distribuidores y restaurantes y casinos selectos compran con nosotros. Hable con nuestro equipo de ventas."
+    text: "Tiendas de abarrotes, distribuidores, restaurantes y casinos selectos, organizaciones sin fines de lucro y escuelas compran con nosotros. Hable con nuestro equipo de ventas."
     button_label: "Contactar a ventas"
   growers:
     heading: "¿Es agricultor local? Venda con nosotros."

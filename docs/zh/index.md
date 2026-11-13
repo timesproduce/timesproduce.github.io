@@ -24,7 +24,7 @@ bottom_image_alt: "新鮮綠色蔬菜與香草"
 audiences:
   buyers:
     heading: "想批發採購嗎？"
-    text: "超市、經銷商，以及精選的餐廳和賭場都向我們進貨。歡迎聯絡業務團隊。"
+    text: "超市、經銷商、精選餐廳和賭場、非營利組織和學校都向我們進貨。歡迎聯絡業務團隊。"
     button_label: "聯絡業務團隊"
   growers:
     heading: "您是在地農民嗎？賣給我們。"

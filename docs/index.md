@@ -24,7 +24,7 @@ bottom_image_alt: "Fresh green vegetables and herbs"
 audiences:
   buyers:
     heading: "Want to buy wholesale?"
-    text: "Grocery stores, distributors, and select restaurants and casinos buy from us. Talk to our sales team."
+    text: "Grocery stores, distributors, select restaurants and casinos, non-profits and schools buy from us. Talk to our sales team."
     button_label: "Contact sales"
   growers:
     heading: "Are you a local farmer? Sell to us."

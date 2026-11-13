@@ -147,3 +147,5 @@ html:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 .contact-form input, .contact-form textarea { font-size: 16px; }
 
 .split h3.grp { font-size: 20px; font-weight: 700; margin: 1.4rem 0 .3rem; color: var(--green); }
+
+.split h1, .split h2 { hyphens: auto; overflow-wrap: anywhere; }
