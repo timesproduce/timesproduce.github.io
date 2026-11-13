@@ -15,7 +15,7 @@ const bg = (p: string) => ({ backgroundImage: `url(${withBase(p)})` })
       <div class="btn-row"><a class="btn solid" href="#grower-form">{{ f.form_button_label }}</a></div>
       <h2 class="sm">{{ f.what_we_buy.heading }}</h2>
       <p>{{ f.what_we_buy.text }}</p>
-      <ul><li v-for="item in f.what_we_buy.items" :key="item">{{ item }}</li></ul>
+      <p v-for="item in f.what_we_buy.items" :key="item">{{ item }}</p>
     </div>
 
     <div class="panel mint top">

@@ -31,8 +31,6 @@ faq:
     answer: "Los agricultores locales de todas las regiones agrícolas de California son bienvenidos."
   - question: "¿Cómo empiezo?"
     answer: "Envíe sus datos con el formulario de esta página. Díganos qué cultiva y cuándo estará listo. Nos comunicaremos con usted."
-  - question: "¿Y la entrega y el pago?"
-    answer: "Hablaremos de los detalles con usted después de recibir sus datos."
 ---
 
 <GrowPage />

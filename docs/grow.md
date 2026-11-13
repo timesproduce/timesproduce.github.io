@@ -31,8 +31,6 @@ faq:
     answer: "Local farmers from all California growing regions are welcome."
   - question: "How do I get started?"
     answer: "Send your information with the form on this page. Tell us what you grow and when it is ready. We will contact you."
-  - question: "What about delivery and payment?"
-    answer: "We will go over the details with you after we get your information."
 ---
 
 <GrowPage />
