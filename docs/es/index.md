@@ -14,7 +14,7 @@ aspects:
     text: "Cada cliente es diferente, así que nos adaptamos a lo que usted necesita. Pida una carga completa de un producto o una mezcla. ¿Necesita productos frescos y secos en el mismo camión? Podemos combinarlos."
   - icon: "globe"
     title: "Alcance mundial"
-    text: "Compramos a agricultores, corredores y distribuidores, grandes y pequeños, de todo el mundo. Usted tiene más opciones de calidad y precio, y productos difíciles de encontrar."
+    text: "Tratamos directamente con agricultores, corredores y distribuidores, grandes y pequeños, de todo el mundo. Usted tiene más opciones de calidad y precio, y productos difíciles de encontrar."
   - icon: "check"
     title: "Calidad"
     text: "Para nosotros es importante que los alimentos sean seguros y buenos. Nuestras instalaciones cuentan con PrimusGFS, un programa de seguridad alimentaria respetado en todo el mundo."
@@ -27,9 +27,9 @@ audiences:
     text: "Tiendas de abarrotes, distribuidores, restaurantes y casinos selectos, organizaciones sin fines de lucro y escuelas compran con nosotros. Hable con nuestro equipo de ventas."
     button_label: "Contactar a ventas"
   growers:
-    heading: "¿Es agricultor local? Venda con nosotros."
-    text: "¿Cultiva algo que quiere vendernos? Cuéntenos de su rancho. Los agricultores deben seguir todas las normas de seguridad alimentaria requeridas."
-    button_label: "Venda su cosecha"
+    heading: "¿Es agricultor? Cultive con nosotros."
+    text: "Usted cultiva, nosotros vendemos. Le damos consejos sobre las tendencias del mercado y lo que piden los compradores. Los agricultores deben seguir todas las normas de seguridad alimentaria requeridas."
+    button_label: "Sea nuestro socio"
 ---
 
 <HomePage />

@@ -17,8 +17,8 @@ sections:
 button_label: "Nuestros productos"
 grower_note:
   heading: "¿Es agricultor?"
-  text: "Siempre buscamos nuevos agricultores. Envíenos sus datos para hablar de vender su cosecha."
-  button_label: "Cultive para nosotros"
+  text: "Nos asociamos con agricultores locales. Usted cultiva, nosotros vendemos y le damos consejos del mercado."
+  button_label: "Cultive con nosotros"
 distributor:
   heading: "¿Busca un distribuidor de frutas y verduras en Los Ángeles?"
   text: "Abastecemos a tiendas de abarrotes, otros distribuidores, restaurantes y casinos selectos, organizaciones sin fines de lucro y escuelas. Esto es lo que usted recibe al trabajar con nosotros:"

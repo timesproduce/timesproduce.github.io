@@ -17,7 +17,7 @@ sections:
 button_label: "Our Produce"
 grower_note:
   heading: "Are you a farmer?"
-  text: "We are always looking for new growers. Send us your information to talk about selling your crops."
+  text: "We partner with local farmers. You grow, we sell, and we share market advice."
   button_label: "Grow with us"
 distributor:
   heading: "Looking for a produce distributor in Los Angeles?"

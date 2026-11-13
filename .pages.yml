@@ -158,7 +158,7 @@ content:
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
       - name: what_we_buy
-        label: What we buy
+        label: How we work together
         type: object
         fields:
           - { name: heading, label: Heading, type: string }
@@ -425,7 +425,7 @@ content:
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
       - name: what_we_buy
-        label: What we buy
+        label: How we work together
         type: object
         fields:
           - { name: heading, label: Heading, type: string }
@@ -670,7 +670,7 @@ content:
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
       - name: what_we_buy
-        label: What we buy
+        label: How we work together
         type: object
         fields:
           - { name: heading, label: Heading, type: string }
@@ -915,7 +915,7 @@ content:
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
       - name: what_we_buy
-        label: What we buy
+        label: How we work together
         type: object
         fields:
           - { name: heading, label: Heading, type: string }
@@ -1160,7 +1160,7 @@ content:
       - { name: heading, label: Heading, type: string }
       - { name: intro, label: Intro text, type: text, description: "Plain words, short sentences (about 6th-grade reading level). Leave a blank line between paragraphs." }
       - name: what_we_buy
-        label: What we buy
+        label: How we work together
         type: object
         fields:
           - { name: heading, label: Heading, type: string }

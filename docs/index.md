@@ -14,7 +14,7 @@ aspects:
     text: "Every customer is different, so we work around what you need. Order a full load of one item or a mix. Need fresh and dry goods on the same truck? We can combine them."
   - icon: "globe"
     title: "Global Reach"
-    text: "We buy from farmers, brokers and distributors big and small, all over the world. You get more choices on quality and price, plus hard-to-find items."
+    text: "We deal directly with farmers, brokers and distributors big and small, all over the world. You get more choices on quality and price, plus hard-to-find items."
   - icon: "check"
     title: "Quality"
     text: "Safe, good food matters to us. Our facility is covered by PrimusGFS, a respected food safety program used around the world."
@@ -27,9 +27,9 @@ audiences:
     text: "Grocery stores, distributors, select restaurants and casinos, non-profits and schools buy from us. Talk to our sales team."
     button_label: "Contact sales"
   growers:
-    heading: "Are you a local farmer? Sell to us."
-    text: "Do you grow something you want to sell to us? Tell us about your farm. Growers must follow all required food safety guidelines."
-    button_label: "Sell your crops"
+    heading: "Are you a farmer? Grow with us."
+    text: "You grow, we sell. We share advice on market trends and what buyers want. Growers must follow all required food safety guidelines."
+    button_label: "Partner with us"
 ---
 
 <HomePage />

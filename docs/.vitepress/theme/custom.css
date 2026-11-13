@@ -148,4 +148,9 @@ html:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 
 .split h3.grp { font-size: 20px; font-weight: 700; margin: 1.4rem 0 .3rem; color: var(--green); }
 
-.split h1, .split h2 { hyphens: auto; overflow-wrap: anywhere; }
+.split h1, .split h2 { hyphens: none; overflow-wrap: break-word; }
+/* Smaller headings on narrow phones so long words wrap whole instead of breaking */
+@media (max-width: 480px) {
+  .split h1 { font-size: 36px; }
+  .split h2, .split h2.md, .split h2.sm { font-size: 30px; }
+}

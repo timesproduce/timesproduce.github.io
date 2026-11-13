@@ -17,7 +17,7 @@ sections:
 button_label: "我們的農產品"
 grower_note:
   heading: "您是農民嗎？"
-  text: "我們一直在尋找新的農民夥伴。請留下資料，洽談出售您的作物。"
+  text: "我們與在地農民合作。您種植，我們銷售，並提供市場建議。"
   button_label: "與我們合作種植"
 distributor:
   heading: "在洛杉磯尋找農產品經銷商嗎？"

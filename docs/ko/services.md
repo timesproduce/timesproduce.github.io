@@ -17,7 +17,7 @@ sections:
 button_label: "취급 농산물 보기"
 grower_note:
   heading: "농부이신가요?"
-  text: "저희는 새로운 재배 농가를 항상 찾고 있습니다. 정보를 보내 주시면 작물 판매를 상담해 드립니다."
+  text: "저희는 지역 농가와 파트너로 일합니다. 재배는 농가가, 판매는 저희가 맡고 시장 조언도 드립니다."
   button_label: "재배 농가 모집"
 distributor:
   heading: "로스앤젤레스에서 농산물 유통업체를 찾으시나요?"

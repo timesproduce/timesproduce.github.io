@@ -7,7 +7,7 @@ Read this before changing any page text.
 ## Audiences
 
 1. **Wholesale buyers:** grocery stores, other distributors, select restaurants and casinos, non-profits and schools. Pages: Home, Services, Contact.
-2. **Local farmers (growers):** Page: Grow With Us (`/grow`). Many are Spanish speakers and read on a phone.
+2. **Local farmers (growers):** Page: Grow With Us (`/grow`). Many are Spanish speakers and read on a phone. This is a **partnership**: the farmer grows, Times Produce sells, and we share advice on market trends and what buyers want. Never say we "buy from" farmers or ask them to "sell to us".
 3. `/produce` is a full produce list for search engines. It stays public and fully visible but is **not in the main menu**; only a small footer link points to it. Don't hide text from visitors.
 
 ## Languages: keep them in sync
@@ -47,7 +47,7 @@ Languages: English (root), Spanish `es`, Traditional Chinese `zh`, Korean `ko`, 
 ## SEO rules
 
 - Each page has one search intent, and its own title and description per language (descriptions under about 160 characters; about 80 for Chinese, Korean and Japanese). Titles must not repeat "Times Produce"; the site adds it.
-- Home = "wholesale produce". Services = "produce distributor". Grow = local farmers selling to a wholesaler.
+- Home = "wholesale produce". Services = "produce distributor". Grow = local farmers looking for a wholesale partner (you grow, we sell).
 - Default site address is `https://timesproduce.com` (no www). Don't change canonical, hreflang or sitemap logic without testing the built HTML.
 - Don't create city-by-city or other near-duplicate pages.
 - Phone staff speak English, Spanish and Japanese. Keep `PHONE_LANGUAGES` in `docs/.vitepress/config.ts` accurate.
