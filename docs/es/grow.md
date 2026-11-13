@@ -8,11 +8,6 @@ intro: "Usted cultiva. Nosotros vendemos. Times Produce se asocia con agricultor
 what_we_buy:
   heading: "Cómo trabajamos juntos"
   text: "Trabajamos con tiendas de abarrotes, distribuidores, restaurantes, escuelas y otras organizaciones sin fines de lucro."
-  items:
-    - "Usted cultiva"
-    - "Nosotros vendemos"
-    - "Estamos disponibles para hablar de las tendencias del mercado"
-    - "Le compartimos lo que pide la gente"
 form_button_label: "Envíe sus datos"
 food_safety:
   heading: "Seguridad alimentaria"

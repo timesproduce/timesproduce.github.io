@@ -8,11 +8,6 @@ intro: "您負責種植，我們負責銷售。Times Produce 與在地農民合�
 what_we_buy:
   heading: "我們如何合作"
   text: "我們服務超市、經銷商、餐廳、學校和其他非營利組織。"
-  items:
-    - "您負責種植"
-    - "我們負責銷售"
-    - "我們隨時可以討論市場趨勢"
-    - "我們分享人們的需求"
 form_button_label: "留下您的資料"
 food_safety:
   heading: "食品安全"

@@ -163,7 +163,6 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
-          - { name: items, label: Crops we buy, type: string, list: true }
       - { name: form_button_label, label: Button that jumps to the form, type: string }
       - { name: faq_heading, label: Questions heading, type: string }
       - name: faq
@@ -430,7 +429,6 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
-          - { name: items, label: Crops we buy, type: string, list: true }
       - { name: form_button_label, label: Button that jumps to the form, type: string }
       - { name: faq_heading, label: Questions heading, type: string }
       - name: faq
@@ -675,7 +673,6 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
-          - { name: items, label: Crops we buy, type: string, list: true }
       - { name: form_button_label, label: Button that jumps to the form, type: string }
       - { name: faq_heading, label: Questions heading, type: string }
       - name: faq
@@ -920,7 +917,6 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
-          - { name: items, label: Crops we buy, type: string, list: true }
       - { name: form_button_label, label: Button that jumps to the form, type: string }
       - { name: faq_heading, label: Questions heading, type: string }
       - name: faq
@@ -1165,7 +1161,6 @@ content:
         fields:
           - { name: heading, label: Heading, type: string }
           - { name: text, label: Text, type: text, description: "Plain words, short sentences (about 6th-grade reading level)." }
-          - { name: items, label: Crops we buy, type: string, list: true }
       - { name: form_button_label, label: Button that jumps to the form, type: string }
       - { name: faq_heading, label: Questions heading, type: string }
       - name: faq

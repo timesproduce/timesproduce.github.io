@@ -8,11 +8,6 @@ intro: "재배는 농가가, 판매는 저희가 맡습니다. Times Produce는 
 what_we_buy:
   heading: "함께 일하는 방식"
   text: "저희는 식료품점, 유통업체, 식당, 학교, 그 밖의 비영리단체와 거래합니다."
-  items:
-    - "농가는 재배합니다"
-    - "저희는 판매합니다"
-    - "시장 동향에 대해 언제든 상담해 드립니다"
-    - "사람들이 찾는 품목을 공유합니다"
 form_button_label: "정보 보내기"
 food_safety:
   heading: "식품 안전"

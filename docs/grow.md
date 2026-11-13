@@ -8,11 +8,6 @@ intro: "You grow. We sell. Times Produce partners with local farmers.\n\nWe have
 what_we_buy:
   heading: "How we work together"
   text: "We work with grocery stores, distributors, restaurants, schools, and other non-profits."
-  items:
-    - "You grow"
-    - "We sell"
-    - "We are available to discuss market trends"
-    - "We share what people are asking for"
 form_button_label: "Send your information"
 food_safety:
   heading: "Food safety"
