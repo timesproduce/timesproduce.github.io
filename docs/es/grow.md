@@ -7,7 +7,7 @@ heading: "¿Es usted agricultor local?"
 intro: "Usted cultiva. Nosotros vendemos. Times Produce se asocia con agricultores locales.\n\nLlevamos más de 70 años en el negocio de frutas y verduras de Los Ángeles."
 what_we_buy:
   heading: "Cómo trabajamos juntos"
-  text: "Trabajamos con tiendas de abarrotes, distribuidores, restaurantes, escuelas y otras organizaciones sin fines de lucro."
+  text: "Trabajamos con tiendas de abarrotes, distribuidores, restaurantes, escuelas y otras organizaciones sin fines de lucro. Le compartimos lo que piden y hacia dónde va el mercado."
 form_button_label: "Envíe sus datos"
 food_safety:
   heading: "Seguridad alimentaria"

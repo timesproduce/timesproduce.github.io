@@ -7,7 +7,7 @@ heading: "Are you a local farmer?"
 intro: "You grow. We sell. Times Produce partners with local farmers.\n\nWe have been in the Los Angeles produce business for more than 70 years."
 what_we_buy:
   heading: "How we work together"
-  text: "We work with grocery stores, distributors, restaurants, schools, and other non-profits."
+  text: "We work with grocery stores, distributors, restaurants, schools, and other non-profits. We share what they are asking for and where the market is going."
 form_button_label: "Send your information"
 food_safety:
   heading: "Food safety"

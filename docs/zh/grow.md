@@ -7,7 +7,7 @@ heading: "您是在地農民嗎？"
 intro: "您負責種植，我們負責銷售。Times Produce 與在地農民合作。\n\n我們從事洛杉磯農產品生意已超過 70 年。"
 what_we_buy:
   heading: "我們如何合作"
-  text: "我們服務超市、經銷商、餐廳、學校和其他非營利組織。"
+  text: "我們服務超市、經銷商、餐廳、學校和其他非營利組織。我們會與您分享他們的需求，以及市場的走向。"
 form_button_label: "留下您的資料"
 food_safety:
   heading: "食品安全"
