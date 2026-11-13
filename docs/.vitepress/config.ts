@@ -10,6 +10,10 @@ const SITE = (process.env.SITE_URL || 'https://timesproduce.com').replace(/\/$/,
 const BASE = process.env.BASE ?? '/'
 const NAME = site.name
 const GTM_ID = 'GTM-MZVXGQP7'
+// Google Analytics 4 (Times Produce property). Loaded directly because the Tag Manager
+// container is not reachable from our Google account. If a GA4 tag using this ID is ever
+// added inside Tag Manager, remove this to avoid counting everything twice.
+const GA_ID = 'G-1C8BST0WKX'
 // Languages on the site. 'dir' is the folder under docs/ (root = English).
 // 'hreflang' and 'ogLocale' must match what search engines and Facebook expect.
 const LOCALES = [
@@ -49,6 +53,12 @@ export default defineConfig({
       'script',
       {},
       `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+    ],
+    ['script', { async: '', src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}` }],
+    [
+      'script',
+      {},
+      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`
     ],
     ['link', { rel: 'icon', type: 'image/png', href: `${BASE}images/clocktower.png` }],
     ['link', { rel: 'apple-touch-icon', href: `${BASE}images/apple-touch-icon.png` }],
