@@ -170,4 +170,4 @@ html:lang(ko) body { word-break: keep-all; overflow-wrap: anywhere; }
 .sms-form .note { margin: 0; }
 /* Let form fields shrink on very narrow phones (320px) instead of forcing sideways scrolling */
 .contact-form label, .contact-form .row > * { min-width: 0; }
-.contact-form input:not([type=checkbox]), .contact-form textarea { width: 100%; min-width: 0; }
+.contact-form input:not([type=checkbox]):not([type=radio]), .contact-form textarea { width: 100%; min-width: 0; }
