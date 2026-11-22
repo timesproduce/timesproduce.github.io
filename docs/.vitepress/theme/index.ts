@@ -7,6 +7,7 @@ import ContactPage from '../components/ContactPage.vue'
 import ContactForm from '../components/ContactForm.vue'
 import GrowPage from '../components/GrowPage.vue'
 import GrowerForm from '../components/GrowerForm.vue'
+import SmsPage from '../components/SmsPage.vue'
 import './custom.css'
 
 export default {
@@ -20,5 +21,6 @@ export default {
     app.component('ContactPage', ContactPage)
     app.component('GrowPage', GrowPage)
     app.component('GrowerForm', GrowerForm)
+    app.component('SmsPage', SmsPage)
   }
 }

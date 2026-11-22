@@ -1,0 +1,27 @@
+---
+title: "Registro para mensajes de texto"
+description: "Regístrese para recibir por mensaje de texto la lista de precios diaria de Times Produce y avisos de sus pedidos. Qué enviamos y cómo cancelar."
+image: "/images/contact.jpg"
+image_alt: "Calabazas sobre un fondo verde"
+heading: "Reciba nuestra lista de precios por mensaje de texto"
+intro: "Regístrese para recibir por mensaje de texto nuestra lista de precios diaria y avisos de sus pedidos. Llene el formulario y elija Sí para aceptar los mensajes."
+name_label: "Su nombre"
+company_label: "Empresa"
+phone_label: "Número de teléfono celular"
+email_label: "Correo electrónico (opcional)"
+consent_yes_label: "Sí, acepto recibir mensajes de texto de Times Produce en el número de celular que escribí arriba."
+consent_details: "Programa: Times Produce Price Sheet & Orders, enviado desde el (323) 261-6677. Mensajes: nuestra lista de precios diaria y ofertas (marketing), confirmaciones de pedidos y preguntas sobre sus pedidos, avisos de entrega y atención al cliente. Frecuencia: un mensaje con la lista de precios cada día hábil, de lunes a viernes (de 20 a 23 al mes), más mensajes de pedidos, entregas y atención al cliente que varían según sus pedidos. El consentimiento no es una condición de compra. Pueden aplicarse tarifas de mensajes y datos. Responda STOP para cancelar en cualquier momento. Responda HELP para recibir ayuda."
+consent_privacy: "No vendemos, alquilamos ni compartimos su número de teléfono celular ni los datos de su registro para recibir mensajes de texto con terceros ni afiliados para sus fines de marketing o promoción. Consulte nuestra {privacy} y los {terms} de nuestros mensajes para saber más sobre cómo manejamos sus datos."
+privacy_link_text: "Política de privacidad"
+terms_link_text: "Términos y condiciones"
+consent_no_label: "No, no deseo recibir mensajes de texto de Times Produce."
+choose_message: "Elija Sí o No."
+no_message: "Sin problema. No le enviaremos mensajes de texto y no guardamos nada."
+submit_label: "Registrarme"
+success_message: "¡Gracias! Recibimos su solicitud."
+next_steps: "Después le enviaremos un mensaje de texto para confirmar. Solo empezaremos a enviar la lista de precios cuando usted responda YES."
+error_message: "Lo sentimos, no se pudo enviar. Inténtelo de nuevo o llámenos al +1 323.261.6677."
+docs_note: "Los documentos están en inglés."
+---
+
+<SmsPage />

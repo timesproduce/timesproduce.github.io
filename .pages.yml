@@ -1247,3 +1247,153 @@ content:
           - { name: crops, label: Crops, type: string }
           - { name: crops_placeholder, label: Crops placeholder, type: string }
           - { name: sending, label: Sending, type: string }
+
+  - name: sms_signup
+    label: "Text message sign-up page"
+    type: file
+    path: docs/sms-signup.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Browser/search title", type: string }
+      - { name: description, label: "Search description", type: text }
+      - { name: image, label: "Photo", type: image }
+      - { name: image_alt, label: "Photo description", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: intro, label: "Intro text", type: text }
+      - { name: name_label, label: "Name label", type: string }
+      - { name: company_label, label: "Company label", type: string }
+      - { name: phone_label, label: "Mobile phone label", type: string }
+      - { name: email_label, label: "Email label", type: string }
+      - { name: consent_yes_label, label: "Consent: Yes checkbox text", type: text }
+      - { name: consent_details, label: "Consent: program, frequency, STOP/HELP (must match the carrier registration)", type: text }
+      - { name: consent_privacy, label: "Consent: privacy sentence (keep {privacy} and {terms}; they become links)", type: text }
+      - { name: privacy_link_text, label: "Privacy link text", type: string }
+      - { name: terms_link_text, label: "Terms link text", type: string }
+      - { name: consent_no_label, label: "Consent: No checkbox text", type: text }
+      - { name: choose_message, label: "Message if neither box is ticked", type: string }
+      - { name: no_message, label: "Message if No is ticked", type: string }
+      - { name: submit_label, label: "Button text", type: string }
+      - { name: success_message, label: "Message after sending", type: string }
+      - { name: next_steps, label: "What happens next", type: text }
+      - { name: error_message, label: "Message if sending fails", type: string }
+      - { name: docs_note, label: "Note about the PDF documents", type: string }
+
+  - name: es_sms_signup
+    label: "Spanish — Text message sign-up page"
+    type: file
+    path: docs/es/sms-signup.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Browser/search title", type: string }
+      - { name: description, label: "Search description", type: text }
+      - { name: image, label: "Photo", type: image }
+      - { name: image_alt, label: "Photo description", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: intro, label: "Intro text", type: text }
+      - { name: name_label, label: "Name label", type: string }
+      - { name: company_label, label: "Company label", type: string }
+      - { name: phone_label, label: "Mobile phone label", type: string }
+      - { name: email_label, label: "Email label", type: string }
+      - { name: consent_yes_label, label: "Consent: Yes checkbox text", type: text }
+      - { name: consent_details, label: "Consent: program, frequency, STOP/HELP (must match the carrier registration)", type: text }
+      - { name: consent_privacy, label: "Consent: privacy sentence (keep {privacy} and {terms}; they become links)", type: text }
+      - { name: privacy_link_text, label: "Privacy link text", type: string }
+      - { name: terms_link_text, label: "Terms link text", type: string }
+      - { name: consent_no_label, label: "Consent: No checkbox text", type: text }
+      - { name: choose_message, label: "Message if neither box is ticked", type: string }
+      - { name: no_message, label: "Message if No is ticked", type: string }
+      - { name: submit_label, label: "Button text", type: string }
+      - { name: success_message, label: "Message after sending", type: string }
+      - { name: next_steps, label: "What happens next", type: text }
+      - { name: error_message, label: "Message if sending fails", type: string }
+      - { name: docs_note, label: "Note about the PDF documents", type: string }
+
+  - name: zh_sms_signup
+    label: "Chinese — Text message sign-up page"
+    type: file
+    path: docs/zh/sms-signup.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Browser/search title", type: string }
+      - { name: description, label: "Search description", type: text }
+      - { name: image, label: "Photo", type: image }
+      - { name: image_alt, label: "Photo description", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: intro, label: "Intro text", type: text }
+      - { name: name_label, label: "Name label", type: string }
+      - { name: company_label, label: "Company label", type: string }
+      - { name: phone_label, label: "Mobile phone label", type: string }
+      - { name: email_label, label: "Email label", type: string }
+      - { name: consent_yes_label, label: "Consent: Yes checkbox text", type: text }
+      - { name: consent_details, label: "Consent: program, frequency, STOP/HELP (must match the carrier registration)", type: text }
+      - { name: consent_privacy, label: "Consent: privacy sentence (keep {privacy} and {terms}; they become links)", type: text }
+      - { name: privacy_link_text, label: "Privacy link text", type: string }
+      - { name: terms_link_text, label: "Terms link text", type: string }
+      - { name: consent_no_label, label: "Consent: No checkbox text", type: text }
+      - { name: choose_message, label: "Message if neither box is ticked", type: string }
+      - { name: no_message, label: "Message if No is ticked", type: string }
+      - { name: submit_label, label: "Button text", type: string }
+      - { name: success_message, label: "Message after sending", type: string }
+      - { name: next_steps, label: "What happens next", type: text }
+      - { name: error_message, label: "Message if sending fails", type: string }
+      - { name: docs_note, label: "Note about the PDF documents", type: string }
+
+  - name: ko_sms_signup
+    label: "Korean — Text message sign-up page"
+    type: file
+    path: docs/ko/sms-signup.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Browser/search title", type: string }
+      - { name: description, label: "Search description", type: text }
+      - { name: image, label: "Photo", type: image }
+      - { name: image_alt, label: "Photo description", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: intro, label: "Intro text", type: text }
+      - { name: name_label, label: "Name label", type: string }
+      - { name: company_label, label: "Company label", type: string }
+      - { name: phone_label, label: "Mobile phone label", type: string }
+      - { name: email_label, label: "Email label", type: string }
+      - { name: consent_yes_label, label: "Consent: Yes checkbox text", type: text }
+      - { name: consent_details, label: "Consent: program, frequency, STOP/HELP (must match the carrier registration)", type: text }
+      - { name: consent_privacy, label: "Consent: privacy sentence (keep {privacy} and {terms}; they become links)", type: text }
+      - { name: privacy_link_text, label: "Privacy link text", type: string }
+      - { name: terms_link_text, label: "Terms link text", type: string }
+      - { name: consent_no_label, label: "Consent: No checkbox text", type: text }
+      - { name: choose_message, label: "Message if neither box is ticked", type: string }
+      - { name: no_message, label: "Message if No is ticked", type: string }
+      - { name: submit_label, label: "Button text", type: string }
+      - { name: success_message, label: "Message after sending", type: string }
+      - { name: next_steps, label: "What happens next", type: text }
+      - { name: error_message, label: "Message if sending fails", type: string }
+      - { name: docs_note, label: "Note about the PDF documents", type: string }
+
+  - name: ja_sms_signup
+    label: "Japanese — Text message sign-up page"
+    type: file
+    path: docs/ja/sms-signup.md
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: "Browser/search title", type: string }
+      - { name: description, label: "Search description", type: text }
+      - { name: image, label: "Photo", type: image }
+      - { name: image_alt, label: "Photo description", type: string }
+      - { name: heading, label: "Heading", type: string }
+      - { name: intro, label: "Intro text", type: text }
+      - { name: name_label, label: "Name label", type: string }
+      - { name: company_label, label: "Company label", type: string }
+      - { name: phone_label, label: "Mobile phone label", type: string }
+      - { name: email_label, label: "Email label", type: string }
+      - { name: consent_yes_label, label: "Consent: Yes checkbox text", type: text }
+      - { name: consent_details, label: "Consent: program, frequency, STOP/HELP (must match the carrier registration)", type: text }
+      - { name: consent_privacy, label: "Consent: privacy sentence (keep {privacy} and {terms}; they become links)", type: text }
+      - { name: privacy_link_text, label: "Privacy link text", type: string }
+      - { name: terms_link_text, label: "Terms link text", type: string }
+      - { name: consent_no_label, label: "Consent: No checkbox text", type: text }
+      - { name: choose_message, label: "Message if neither box is ticked", type: string }
+      - { name: no_message, label: "Message if No is ticked", type: string }
+      - { name: submit_label, label: "Button text", type: string }
+      - { name: success_message, label: "Message after sending", type: string }
+      - { name: next_steps, label: "What happens next", type: text }
+      - { name: error_message, label: "Message if sending fails", type: string }
+      - { name: docs_note, label: "Note about the PDF documents", type: string }
