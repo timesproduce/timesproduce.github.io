@@ -1274,7 +1274,6 @@ content:
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
       - { name: success_message, label: "Message after sending", type: string }
-      - { name: next_steps, label: "What happens next", type: text }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
 
@@ -1304,7 +1303,6 @@ content:
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
       - { name: success_message, label: "Message after sending", type: string }
-      - { name: next_steps, label: "What happens next", type: text }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
 
@@ -1334,7 +1332,6 @@ content:
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
       - { name: success_message, label: "Message after sending", type: string }
-      - { name: next_steps, label: "What happens next", type: text }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
 
@@ -1364,7 +1361,6 @@ content:
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
       - { name: success_message, label: "Message after sending", type: string }
-      - { name: next_steps, label: "What happens next", type: text }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
 
@@ -1394,6 +1390,5 @@ content:
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
       - { name: success_message, label: "Message after sending", type: string }
-      - { name: next_steps, label: "What happens next", type: text }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
