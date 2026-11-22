@@ -54,7 +54,7 @@ Languages: English (root), Spanish `es`, Traditional Chinese `zh`, Korean `ko`, 
 
 ## Analytics
 
-- The site loads Google Analytics 4 `G-1C8BST0WKX` directly (see `config.ts`) and sends `contact_form_submit`, `grower_form_submit` and `tel_click` events, each with a `locale` value (`root` means English).
+- The site loads Google Analytics 4 `G-1C8BST0WKX` directly (see `config.ts`) and sends `contact_form_submit`, `grower_form_submit`, `sms_signup_submit` and `tel_click` events, each with a `locale` value (`root` means English).
 - The Tag Manager container (`GTM-MZVXGQP7`) is also on the page. **Don't add a GA4 tag for the same ID inside Tag Manager**, or every visit is counted twice.
 - Analytics only runs on the live host, so local previews and test sweeps are safe. Don't test with the real forms: they send real emails and count as real events.
 

@@ -1,0 +1,26 @@
+---
+title: "Registro para mensajes de texto"
+description: "Regístrese para recibir por mensaje de texto la lista de precios diaria de Times Produce y avisos de sus pedidos. Qué enviamos y cómo cancelar."
+image: "/images/contact.jpg"
+image_alt: "Calabazas sobre un fondo verde"
+heading: "Reciba por mensaje de texto la lista de precios diaria de Times Produce"
+intro: "Times Produce Inc. es un distribuidor mayorista de frutas y verduras en Los Ángeles. Los compradores de nuestros clientes comerciales pueden recibir por mensaje de texto nuestra lista de precios diaria y los mensajes de sus pedidos."
+name_label: "Su nombre"
+company_label: "Nombre de la empresa o tienda"
+phone_label: "Número de teléfono celular"
+email_label: "Correo electrónico (opcional)"
+consent_yes_label: "Sí, acepto recibir mensajes de texto de Times Produce Inc. en el número de celular que escribí arriba."
+consent_details: "Los mensajes incluyen nuestra lista de precios diaria y ofertas (promocionales), confirmaciones de pedidos, avisos de entrega y respuestas de atención al cliente. La frecuencia varía: un mensaje con la lista de precios cada día hábil, de lunes a viernes (de 20 a 23 al mes), más mensajes de pedidos cuando haga falta. El consentimiento no es una condición de compra. Pueden aplicarse tarifas de mensajes y datos. Responda STOP para cancelar en cualquier momento. Responda HELP para recibir ayuda, o llame al (323) 261-6677."
+consent_privacy: "No compartimos con nadie los datos de su registro para recibir mensajes de texto. Consulte nuestra {privacy} y los {terms} de nuestros mensajes para saber más sobre cómo manejamos sus datos."
+privacy_link_text: "Política de privacidad"
+terms_link_text: "Términos y condiciones"
+consent_no_label: "No, no deseo recibir mensajes de texto de Times Produce Inc."
+choose_message: "Elija Sí o No."
+no_message: "Sin problema. No le enviaremos mensajes de texto y no guardamos nada."
+submit_label: "Registrarme"
+success_message: "Gracias. Le enviaremos un mensaje de texto para confirmar su registro. Puede responder STOP en cualquier momento."
+error_message: "Lo sentimos, no se pudo enviar. Inténtelo de nuevo o llámenos al +1 323.261.6677."
+docs_note: "Los documentos están en inglés."
+---
+
+<SmsPage />

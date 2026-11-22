@@ -1,0 +1,26 @@
+---
+title: "Text Message Sign-Up"
+description: "Sign up to get the Times Produce daily price sheet and order updates by text message. See what we send, how often, and how to stop."
+image: "/images/contact.jpg"
+image_alt: "Squash and gourds on a green background"
+heading: "Get the Times Produce daily price sheet by text"
+intro: "Times Produce Inc. is a wholesale produce distributor in Los Angeles. Buyers at our customer businesses can get our daily price sheet and order messages by text."
+name_label: "Your name"
+company_label: "Company / store name"
+phone_label: "Mobile phone number"
+email_label: "Email (optional)"
+consent_yes_label: "Yes, I agree to receive text messages from Times Produce Inc. at the mobile number above."
+consent_details: "Messages include our daily price sheet and specials (promotional), order confirmations, delivery updates and customer care replies. Message frequency varies: one price sheet message each business day, Monday to Friday (about 20 to 23 per month), plus order messages as needed. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help, or call (323) 261-6677."
+consent_privacy: "We do not share your mobile opt-in information with anyone. See our {privacy} and our messaging {terms} for more information about how we handle your data."
+privacy_link_text: "Privacy Policy"
+terms_link_text: "Terms and Conditions"
+consent_no_label: "No, I do not want to receive text messages from Times Produce Inc."
+choose_message: "Please choose Yes or No."
+no_message: "No problem. We will not send you text messages, and we did not save anything."
+submit_label: "Sign up"
+success_message: "Thank you. We'll send a text to confirm your sign-up. You can reply STOP at any time."
+error_message: "Sorry, that didn't go through. Please try again, or call us at +1 323.261.6677."
+docs_note: "Both open as PDF files."
+---
+
+<SmsPage />
