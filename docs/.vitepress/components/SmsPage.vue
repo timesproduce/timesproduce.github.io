@@ -36,8 +36,7 @@ const choice = ref<'' | 'yes' | 'no'>('')
 const notice = ref('')
 const state = ref<'idle' | 'sending' | 'done' | 'error'>('idle')
 
-function pick(which: 'yes' | 'no', checked: boolean) {
-  choice.value = checked ? which : ''
+function onChoice() {
   notice.value = ''
 }
 
@@ -94,7 +93,7 @@ async function submit(e: Event) {
         </div>
 
         <div class="consent-box">
-          <input id="sms-yes" type="checkbox" :checked="choice === 'yes'" @change="pick('yes', ($event.target as HTMLInputElement).checked)" />
+          <input id="sms-yes" v-model="choice" type="radio" name="sms_choice" value="yes" @change="onChoice" />
           <div>
             <label for="sms-yes"><strong>{{ f.consent_yes_label }}</strong></label>
             <p>{{ f.consent_details }}</p>
@@ -107,7 +106,7 @@ async function submit(e: Event) {
           </div>
         </div>
         <div class="consent-box">
-          <input id="sms-no" type="checkbox" :checked="choice === 'no'" @change="pick('no', ($event.target as HTMLInputElement).checked)" />
+          <input id="sms-no" v-model="choice" type="radio" name="sms_choice" value="no" @change="onChoice" />
           <label for="sms-no">{{ f.consent_no_label }}</label>
         </div>
 
@@ -120,6 +119,7 @@ async function submit(e: Event) {
         <input name="_gotcha" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
 
         <button type="submit" :disabled="state === 'sending'">{{ state === 'sending' ? ui.contact_form.sending : f.submit_label }}</button>
+        <p class="note">{{ f.welcome_note }}</p>
         <p v-if="notice" role="alert">{{ notice }}</p>
         <p v-if="state === 'error'" role="alert">{{ f.error_message }}</p>
       </form>

@@ -1273,6 +1273,7 @@ content:
       - { name: choose_message, label: "Message if neither box is ticked", type: string }
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
+      - { name: welcome_note, label: "Line after the button", type: string }
       - { name: success_message, label: "Message after sending", type: string }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
@@ -1302,6 +1303,7 @@ content:
       - { name: choose_message, label: "Message if neither box is ticked", type: string }
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
+      - { name: welcome_note, label: "Line after the button", type: string }
       - { name: success_message, label: "Message after sending", type: string }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
@@ -1331,6 +1333,7 @@ content:
       - { name: choose_message, label: "Message if neither box is ticked", type: string }
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
+      - { name: welcome_note, label: "Line after the button", type: string }
       - { name: success_message, label: "Message after sending", type: string }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
@@ -1360,6 +1363,7 @@ content:
       - { name: choose_message, label: "Message if neither box is ticked", type: string }
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
+      - { name: welcome_note, label: "Line after the button", type: string }
       - { name: success_message, label: "Message after sending", type: string }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
@@ -1389,6 +1393,7 @@ content:
       - { name: choose_message, label: "Message if neither box is ticked", type: string }
       - { name: no_message, label: "Message if No is ticked", type: string }
       - { name: submit_label, label: "Button text", type: string }
+      - { name: welcome_note, label: "Line after the button", type: string }
       - { name: success_message, label: "Message after sending", type: string }
       - { name: error_message, label: "Message if sending fails", type: string }
       - { name: docs_note, label: "Note about the PDF documents", type: string }
